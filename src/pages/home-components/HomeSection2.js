@@ -29,7 +29,7 @@ export default function HomeSection2() {
   };
   return (
     <>
-      <div className="secondSection">
+      <div className="homeSecondSection">
         <div>What we offer</div>
         <div>
           The Creative Problem Solving programme is series of digital creation
@@ -37,7 +37,7 @@ export default function HomeSection2() {
           designated by New Zealand's leading IT industry experts and schools.
         </div>
       </div>
-      <div className="thirdSection">
+      <div className="">
         <div>What will student create?</div>
         <button onClick={handleAnimation} className="squareButtonPicture">
           <img src={animations} />

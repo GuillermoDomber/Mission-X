@@ -22,7 +22,7 @@ export default function HomeSection4() {
 
   return (
     <>
-      <div className="fifthSection">
+      <div className="homeFourthSection">
         <div>How our programe help teachers and schools</div>
         <button onClick={handleDigTech} className="howHelpButtons">
           DIGITAL TECHNOLOGIES

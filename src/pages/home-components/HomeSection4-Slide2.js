@@ -1,7 +1,7 @@
 export default function Slide2() {
   return (
     <>
-      <div className="slides">
+      <div className="homeSlides">
         <div>Expands Digital Knowledge Base</div>
         <div>
           This programme gives you the 5 major capabilities to be confident in

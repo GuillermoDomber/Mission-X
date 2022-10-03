@@ -3,7 +3,7 @@
 export default function Slide4() {
     return (
         <>
-        <div className="slides">
+        <div className="homeSlides">
         <div>IR4.0</div>
         <div>Designed with IT industry experts, the programme develops the students to find applicable jobs and careers in the Fourth Industrial Revolution. (IR4.0)</div>
         <div>LEARNING TO LEARN</div>

@@ -8,7 +8,7 @@ export default function HomeSection3() {
 
 return (
   <>
-    <div className="fourthSection">
+    <div className="homeThirdSection">
       <div>
         Teaching kids programing and digital skills is MORE than just writing
         code

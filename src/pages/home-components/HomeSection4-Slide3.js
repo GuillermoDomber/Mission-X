@@ -3,7 +3,7 @@
 export default function Slide3() {
     return (
         <>
-        <div className="slides">
+        <div className="homeSlides">
         <div>Enhance key competencies</div>
         <div>The programme enhances capabilities of students in the 5 Key Competencies identified in the New Zealand Curriculum:</div>
         <div>THINKING</div>

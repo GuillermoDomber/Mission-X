@@ -6,7 +6,7 @@ export default function HomeSection5 () {
 
 return (
   <>
-    <div className="sixthSection">
+    <div className="homeFifthSection">
     <img src={classRoom} alt=""></img>
     <div>What are you waiting for?</div>
     <div>Start teaching Digital Technologies today.</div>
