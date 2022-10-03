@@ -13,10 +13,10 @@ return (
         Teaching kids programing and digital skills is MORE than just writing
         code
       </div>
-      <img src={groupImg1} alt=""></img>
-      <img src={groupImg2} alt=""></img>
-      <img src={groupImg3} alt=""></img>
-      <img src={groupImg4} alt=""></img>
+      <img src={groupImg1} alt="img"></img>
+      <img src={groupImg2} alt="img"></img>
+      <img src={groupImg3} alt="img"></img>
+      <img src={groupImg4} alt="img"></img>
     </div>
   </>
 )

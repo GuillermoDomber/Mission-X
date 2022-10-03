@@ -1,23 +1,25 @@
 import { useState } from "react";
 
-import catImg from "../../assets/cat.jpg";
-import duckImg from "../../assets/duck.jpg";
-import dogImg from "../../assets/dog.jpg";
+import Slide1 from "../../pages/home-components/HomeSection4-Slide1"
+import Slide2 from "../../pages/home-components/HomeSection4-Slide2"
+import Slide3 from "../../pages/home-components/HomeSection4-Slide3"
+import Slide4 from "../../pages/home-components/HomeSection4-Slide4"
+
 
 export default function HomeSection4() {
-  const [buttonsImageURL, buttonImageURL] = useState("");
+  const [buttonsImageURL, setButtonImageURL] = useState(Slide1);
 
   const handleDigTech = () => {
-    buttonImageURL(dogImg);
+    setButtonImageURL(Slide1);
   };
   const handleLearnPath = () => {
-    buttonImageURL(catImg);
+    setButtonImageURL(Slide2);
   };
   const handleKeyComp = () => {
-    buttonImageURL(duckImg);
+    setButtonImageURL(Slide3);
   };
   const handleIr4 = () => {
-    buttonImageURL(duckImg);
+    setButtonImageURL(Slide4);
   };
 
   return (
@@ -37,7 +39,7 @@ export default function HomeSection4() {
         <button onClick={handleIr4} className="howHelpButtons">
           IR4.0
         </button>
-        <img src={buttonsImageURL} alt="" />
+        {buttonsImageURL}
       </div>
     </>
   );

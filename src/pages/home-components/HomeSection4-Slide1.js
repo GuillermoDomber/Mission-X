@@ -1,4 +1,7 @@
+
+
 export default function Slide1() {
+
   return (
     <>
       <div className="homeSlides">

@@ -13,7 +13,8 @@ import laptop3 from "../../assets/Home/laptop3.png";
 import laptop4 from "../../assets/Home/laptop4.png";
 
 export default function HomeSection2() {
-  const [buttonsImageURL1, setButtonImageURL1] = useState("");
+  const [buttonsImageURL1, setButtonImageURL1] = useState(laptop1);
+
 
   const handleAnimation = () => {
     setButtonImageURL1(laptop1);
@@ -54,10 +55,10 @@ export default function HomeSection2() {
 
         <img src={buttonsImageURL1} alt="" />
 
-        <button>animation</button>
-        <button>augreality</button>
-        <button>chatbots</button>
-        <button>games</button>
+        <button onClick={handleAnimation} className="roundButtonPicture">animation</button>
+        <button onClick={handleAugRea} className="roundButtonPicture">augreality</button>
+        <button onClick={handleChatBots} className="roundButtonPicture">chatbots</button>
+        <button onClick={handleGames} className="roundButtonPicture">games</button>
       </div>
     </>
   )
