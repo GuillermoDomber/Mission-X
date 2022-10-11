@@ -1,6 +1,7 @@
 .homeSection3 {
     display:flex;
     flex-direction: column;
+    
 }
 
 .homeSection3Title {
@@ -12,4 +13,5 @@ margin-bottom: 50px;
 .homeSection3Imgs {
     display: flex;
     justify-content: space-around;
+    /* flex-direction: row; */
 }

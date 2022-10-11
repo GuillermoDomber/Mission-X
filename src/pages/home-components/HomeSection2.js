@@ -14,20 +14,27 @@ import laptop4 from "../../assets/Home/laptop4.png";
 
 export default function HomeSection2() {
   const [buttonsImageURL1, setButtonImageURL1] = useState(laptop1);
-  const [darkCircle, setDarkCircle] = useState();
+  // const [darkCircle, setDarkCircle] = useState(1);
+  // give 1 a value
 
   const handleAnimation = () => {
     setButtonImageURL1(laptop1);
-    setDarkCircle();
+    // setDarkCircle(1);
   };
   const handleAugRea = () => {
     setButtonImageURL1(laptop2);
+        // setDarkCircle(2);
+
   };
   const handleChatBots = () => {
     setButtonImageURL1(laptop3);
+        // setDarkCircle(3);
+
   };
   const handleGames = () => {
     setButtonImageURL1(laptop4);
+        // setDarkCircle(4);
+
   };
   return (
     <>
@@ -42,38 +49,38 @@ export default function HomeSection2() {
           <div className="homeSection2Title2">What will student create?</div>
           <div className="homeSection2ImageButtons">
             <img
+              alt="img"
               className="homeSec2ImgBtn"
               onClick={handleAnimation}
               src={animations}
             />
             <img
+              alt="img"
               className="homeSec2ImgBtn"
               onClick={handleAugRea}
               src={augreality}
             />
             <img
+              alt="img"
               className="homeSec2ImgBtn"
               onClick={handleChatBots}
               src={chatbots}
             />
-            <img className="homeSec2ImgBtn" onClick={handleGames} src={games} />
+            <img
+              alt="img"
+              className="homeSec2ImgBtn"
+              onClick={handleGames}
+              src={games}
+            />
           </div>
         </div>
         <div className="homeSection2Right">
-          <img className="homeSection2Image" src={buttonsImageURL1} alt="" />
+          <img alt="img" className="homeSection2Image" src={buttonsImageURL1} />
           <div className="homeSection2CircleButtons">
-            <button onClick={handleAnimation} className="roundButtonPicture">
-              animation
-            </button>
-            <button onClick={handleAugRea} className="roundButtonPicture">
-              augreality
-            </button>
-            <button onClick={handleChatBots} className="roundButtonPicture">
-              chatbots
-            </button>
-            <button onClick={handleGames} className="roundButtonPicture">
-              games
-            </button>
+            <button onClick={handleAnimation} className="roundButton"></button>
+            <button onClick={handleAugRea} className="roundButton"></button>
+            <button onClick={handleChatBots} className="roundButton"></button>
+            {/* <button onClick={handleGames} className={roundButton ? 'darkCircle' : 'blanckCircle'}></button> */}
           </div>
         </div>
       </div>
