@@ -1,6 +1,12 @@
 .homeSection5 {
   display: flex;
-  /* justify-content: center; */
+  justify-content: ;
   flex-direction: row;
   /* margin: 0px 20rem 0px 20rem; */
+}
+.homeSection5Left {
+  margin: 0px 2rem 0px 20rem;
+}
+.homeSection5Right {
+  /* border: solid; */
 }
