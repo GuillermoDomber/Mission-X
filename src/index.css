@@ -18,3 +18,16 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+:root{
+  --main-font-color: #707070;
+  --headings-font-color: #6C6C6C;
+  --lighter-blue: #B2E4FA;
+  --darker-blue: #43C0F6;
+  --white: #FFFFFF;
+
+}
+
+.dummyNavBar{
+  background-color: rgb(221, 193, 242);
+}

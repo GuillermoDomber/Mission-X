@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function DummyNavBar() {
   return (
-    <div>
+    <div className="dummyNavBar">
       <Link to="/">HomePage</Link>
       <Link to="/StudentDashboard" className="Links">
         StudentDashboard

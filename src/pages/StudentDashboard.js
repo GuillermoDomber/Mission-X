@@ -8,13 +8,15 @@ import DashboardFooter from "../components/DashboardFooter";
 export default function StudentDashboard() {
   return (
     <div className={styles.pageContainer}>
-      <h1>StudentDashboard</h1>
+      
       <DashboardNavBar />
 
       <main className={styles.mainHeroSection}>
         <DashboardSidebar />
         <StudentDashboardHero />
       </main>
+
+
 
       <DashboardFooter />
     </div>
