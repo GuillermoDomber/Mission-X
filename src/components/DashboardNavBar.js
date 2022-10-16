@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom'
 import styles from "./DashboardNavBar.module.css";
 
 // IMAGE IMPORTS-----------------------
@@ -15,7 +16,7 @@ export default function DashboardNavBar() {
 
 
       <div>
-        <img src={Logo} className={styles.dashboard_navbar_logo} alt="Level Up Logo"/>
+      <Link to="/"><img src={Logo} className={styles.dashboard_navbar_logo} alt="Level Up Logo"/></Link> 
       </div>
 
       <div className={styles.dashboard_progressTracker_container} >
