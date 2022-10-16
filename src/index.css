@@ -30,4 +30,8 @@ code {
 
 .dummyNavBar{
   background-color: rgb(221, 193, 242);
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px 0;
 }

@@ -5,3 +5,8 @@
     color: white;
 }
 
+.mainHeroSection{
+    height: 88vh;
+    background-color: var(--lighter-blue);
+    display: flex;
+}
