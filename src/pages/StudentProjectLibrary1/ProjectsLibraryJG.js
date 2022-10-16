@@ -1,15 +1,8 @@
 import styles from "./ProjectsLibraryJG.module.css";
 
 export default function ProjectsLibraryJG() {
-let projects =[
-  {
-image:"project1.png",
-name:"Introduction",
-difficulty:"BEGINNER | Animation",
-  }
 
 
-]
 
 
 

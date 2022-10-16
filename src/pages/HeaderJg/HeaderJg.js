@@ -1,8 +1,8 @@
 import styles from "./HeaderJg.module.css";
-import logo from "../libPhoto/logo.png";
-import Mflag from "../libPhoto/Mflag.jpg";
-import NzFlag from "../libPhoto/NZFlag.jpg";
-import kidImg from "../libPhoto/RawiriFletcher.png";
+import logo from "../../assets/libPhoto/logo.png";
+import Mflag from "../../assets/libPhoto/Mflag.jpg";
+import NzFlag from "../../assets/libPhoto/NZFlag.jpg";
+import kidImg from "../../assets/libPhoto/RawiriFletcher.png";
 import { Link } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 export default function HeaderJG() {
@@ -52,11 +52,7 @@ export default function HeaderJG() {
           </div>
 
           <div onClick={showUL} className={styles.downRight} ref={menuClose}>
-            {/* <div
-              onClick={showUL}
-              className={`styles.dropDown ${show ? "active" : "inactive"}`}
-            >
-               */}
+         
               <img className={styles.kidPhoto} src={kidImg} alt='kid' ></img>
            
               <p className={styles.Rflet}>RAWIRI FLETCHER</p>
@@ -69,16 +65,7 @@ export default function HeaderJG() {
             ) : (
               ""
             )}
-            {/* </div> */}
-            {/* <div className={styles.content}>
-              <ul>
-                <li>
-                  <Link to="./StudentProfileViewer">My Profile</Link>{" "}
-                </li>
-                <li>Settings</li>
-                <li>Log out</li>
-              </ul>
-            </div> */}
+            
           </div>
         </div>
       </nav>

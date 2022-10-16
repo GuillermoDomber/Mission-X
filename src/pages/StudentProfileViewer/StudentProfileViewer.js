@@ -1,8 +1,8 @@
 import HeaderJG from "./HeaderJg";
 import styles from "./StudentProfileViewer.module.css";
-import kidImg from "../libPhoto/RawiriFletcher.png";
-import Edit from "../libPhoto/EditProfile.jpg";
-import Change from "../libPhoto/ChangePhoto.jpg";
+import kidImg from "../../assets/libPhoto/RawiriFletcher.png";
+import Edit from "../../assets/libPhoto/EditProfile.jpg";
+import Change from "../../assets/libPhoto/ChangePhoto.jpg";
 import { Link } from "react-router-dom";
 
 
