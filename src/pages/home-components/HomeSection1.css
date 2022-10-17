@@ -1,11 +1,17 @@
 .homeSection1 {
-  background: transparent url("../../assets/Home/hero.png");
+  /* background: url("../../assets/Home/hero.png"); */
+  /* background-position: center; */
   opacity: 1;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   margin: 0rem;
   height: 400px;
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .homeSection1 {
+background: fixed;  }
 }
 
 .homeSection1Title {

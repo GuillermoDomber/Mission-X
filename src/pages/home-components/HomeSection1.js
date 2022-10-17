@@ -1,10 +1,15 @@
 import React from "react";
 import "./HomeSection1.css";
+import background from "../../assets/Home/hero.png";
 
 export default function HomeSection1() {
+ 
   return (
     <>
-      <div className="homeSection1">
+      <div
+        className="homeSection1"
+        style={{ backgroundImage: `url(${background})` }}
+      >
         <div className="homeSection1Title">
           Prepare young minds for a better
           <span className="futureBlue"> future.</span>

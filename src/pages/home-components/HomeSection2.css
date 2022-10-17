@@ -49,10 +49,29 @@
   /* text-align: justify; */
   /* width: 50%; */
 }
-.roundButton {
+/* .roundButton {
   outline-style: initial;
   border-radius: 100px;
   cursor: pointer;
   width: 20px;
   height: 20px;
+  background-color: white;
+} */
+.roundButton1,
+.roundButton2,
+.roundButton3,
+.roundButton4 {
+  outline-style: initial;
+  border-radius: 100px;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border: 1px solid #000;
 }
+/* .roundButton1.active,
+.roundButton2.active,
+.roundButton3.active,
+.roundButton4.active {
+  background-color: #000;
+} */

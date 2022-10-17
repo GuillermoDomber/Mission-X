@@ -14,28 +14,58 @@ import laptop4 from "../../assets/Home/laptop4.png";
 
 export default function HomeSection2() {
   const [buttonsImageURL1, setButtonImageURL1] = useState(laptop1);
-  // const [darkCircle, setDarkCircle] = useState(1);
-  // give 1 a value
+  const [backGround, setBackGround] = useState("black");
+  const changeColour = function () {
+    // e.target.style.background = "black";
+    switch (backGround) {
+      case "white":
+        setBackGround("black");
+        break;
+      case "black":
+        setBackGround("white");
+        break;
+      default:
+    }
+  
+  };
+  // var buttons = document.querySelectorAll(
+  //   ".roundButton1, .roundButton2, .roundButton3, .roundButton4"
+  // );
+
+  // for (var i = 0; i < buttons.length; i++) {
+  //   buttons[i].addEventListener("click", function () {
+  //     this.classList.toggle("active");
+  //   });
+  // }
+  //   const buttons = document.querySelectorAll('button');
+
+  // buttons.forEach(button => {
+  //   button.addEventListener('click', event => {
+  //     button.style.backgroundColor = 'black';
+  //   });
+  // });
 
   const handleAnimation = () => {
-    setButtonImageURL1(laptop1);
-    // setDarkCircle(1);
+    if (setButtonImageURL1(laptop1)) {
+      changeColour("black");
+    } else {
+      changeColour("white");
+    }
   };
+
   const handleAugRea = () => {
     setButtonImageURL1(laptop2);
-        // setDarkCircle(2);
-
+    changeColour("");
   };
   const handleChatBots = () => {
     setButtonImageURL1(laptop3);
-        // setDarkCircle(3);
-
+    changeColour("");
   };
   const handleGames = () => {
     setButtonImageURL1(laptop4);
-        // setDarkCircle(4);
-
+    changeColour("");
   };
+
   return (
     <>
       <div className="homeSection2">
@@ -77,10 +107,29 @@ export default function HomeSection2() {
         <div className="homeSection2Right">
           <img alt="img" className="homeSection2Image" src={buttonsImageURL1} />
           <div className="homeSection2CircleButtons">
-            <button onClick={handleAnimation} className="roundButton"></button>
-            <button onClick={handleAugRea} className="roundButton"></button>
-            <button onClick={handleChatBots} className="roundButton"></button>
-            {/* <button onClick={handleGames} className={roundButton ? 'darkCircle' : 'blanckCircle'}></button> */}
+            <button
+              style={{ background: backGround }}
+              onClick={() => {
+                handleAnimation();
+                // changeColour();
+              }}
+              className="roundButton1"
+            ></button>
+            <button
+              style={{ background: backGround }}
+              onClick={handleAugRea}
+              className="roundButton2"
+            ></button>
+            <button
+              style={{ background: backGround }}
+              onClick={handleChatBots}
+              className="roundButton3"
+            ></button>
+            <button
+              style={{ background: backGround }}
+              onClick={handleGames}
+              className="roundButton4"
+            ></button>
           </div>
         </div>
       </div>
