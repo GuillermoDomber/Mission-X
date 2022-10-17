@@ -27,7 +27,7 @@ export default function Features() {
             designated by New Zealand's leading IT industry experts and schools.
           </div>
           <div className="home-feature-subtitle">What will student create?</div>
-          <div>
+          <div className="home-feature-bigButtons">
             <BigButton name="animations" onClick={() => setSelected(0)} />
             <BigButton name="augreality" onClick={() => setSelected(1)} />
             <BigButton name="chatbots" onClick={() => setSelected(2)} />
@@ -42,8 +42,8 @@ export default function Features() {
           />
         </div>
       </div>
-      <div className="homeSection3">
-        <div className="homeSection3Title">
+      <div>
+        <div className="home-feature-centre-title">
           Teaching kids programing and digital skills is MORE than just writing
           code
         </div>

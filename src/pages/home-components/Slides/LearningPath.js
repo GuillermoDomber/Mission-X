@@ -4,7 +4,7 @@ export default function Slide1() {
 
   return (
     <>
-      <div className="homeSlides">
+      <div className="home-slides">
         <div>Interlinking Pathways </div>
         <div>
           This programme gives us 5 important interlinking Learning Pathways.

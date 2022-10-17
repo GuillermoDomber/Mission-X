@@ -4,26 +4,38 @@
 
 .home-feature-big-img {
   width: 25%;
-  padding: 0 22px;
-}
-.homeSection2Left {
-  /* width: 950px; */
+  padding: 0 22px 80px 22px;
 }
 
 .home-feature-title {
+  padding-top: 50px;
+  padding-bottom: 25px;
   font-size: 42px;
-  margin-top: 100px;
+  padding-left: 190px;
+  padding-right: 190px;
+  text-align: justify;
+}
+.home-feature-text {
+  padding-bottom: 25px;
+  font-size: 20px;
+  padding-left: 190px;
+  /* padding-right: 190px; */
   text-align: justify;
 }
 .futureBlue {
   color: blue;
 }
-.home-feature-text {
+.home-feature-subtitle {
+  padding-top: 50px;
+  padding-bottom: 25px;
+  font-size: 29px;
+  padding-left: 190px;
+  padding-right: 190px;
   text-align: justify;
-  width: 1000px;
-  font-size: 20px;
 }
-
+.home-feature-bigButtons {
+  padding-left: 190px;
+}
 .roundButton {
   outline-style: initial;
   border-radius: 100px;
@@ -32,14 +44,19 @@
   height: 20px;
   background-color: white;
   border: 1px solid #000;
+  margin-right: 10px;
 }
 
 .home-hero-info {
   align-self: flex-start;
   width: 60%;
 }
-
-.home-feature-title {
-  padding-top: 50px;
-  padding-bottom: 25px;
+.home-feature-centre-title {
+  font-size: 30px;
+  margin-top: 140px;
+  margin-bottom: 30px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 30px;
 }

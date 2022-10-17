@@ -7,8 +7,8 @@ import IR4 from "./Slides/IR4.0";
 
 const slides = [LearningPath, DigitalTechnologies, KeyCompetencies, IR4];
 const buttonLabels = [
-  "DIGITAL TECHNOLOGIES",
   "LEARNING PATHWAYS",
+  "DIGITAL TECHNOLOGIES",
   "KEY COMPETENCIES",
   "IR4.0",
 ];
@@ -19,7 +19,7 @@ const Navigation = ({ position = 0, items = [], onClick }) => {
       {items.map((_, i) => (
         <button
           onClick={() => onClick(i)}
-          className={`button ${position === i ? "button-active" : ""}`}
+          className={`button ${position === i ? "button-active" : ""} button-xl`}
         >
           {buttonLabels[i]}
         </button>
