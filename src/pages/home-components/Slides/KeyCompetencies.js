@@ -1,5 +1,3 @@
-import "./HomeSection4-Slide.css";
-
 export default function Slide3() {
   return (
     <>

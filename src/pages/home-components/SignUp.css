@@ -1,0 +1,45 @@
+.homeSection5 {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  /* margin: 0px 20rem 0px 20rem; */
+}
+.homeSection5Left {
+  margin: 0rem 0rem 0rem 20rem;
+}
+.homeSection5Right {
+  margin: 0rem 0rem 0rem 0rem;
+}
+.homeSection5Title {
+  padding: 0px 0px 0px 400px;
+  /* width: 1000px; */
+  font-size: 42px;
+  margin-top: 100px;
+  text-align: justify;
+}
+.homeSection5Text {
+  text-align: justify;
+  padding: 0px 0px 0px 400px;
+  /* width: 1000px; */
+  font-size: 20px;
+}
+.homeSection5Buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 10px 0px 0px 400px;
+  /* width: 900px; */
+  margin-top: 10px;
+}
+.homeSection5ButtonLearn {
+  top: 381px;
+  left: 398px;
+  /* width: 175px; */
+  height: 35px;
+}
+.homeSection5ButtonSign {
+  top: 381px;
+  left: 645px;
+  /* width: 175px; */
+  height: 35px;
+}

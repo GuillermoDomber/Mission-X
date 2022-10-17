@@ -1,9 +1,18 @@
+.homeSlides {
+  background-color: #efeff1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: justify;
+  margin: 1rem 20rem;
+  padding: 2rem 2rem;
+}
+
 .homeSection4 {
   display: flex;
   justify-content: center;
   flex-direction: column;
   margin: 0px 20rem 0px 20rem;
-
 }
 .homeSection4Title {
   font-size: 42px;
