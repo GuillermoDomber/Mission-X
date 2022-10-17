@@ -4,7 +4,7 @@ import "./SignUp.css";
 export default function HomeSection5() {
   return (
     <>
-      <div className="homeSection5">
+      <div className="home-row">
         <div className="homeSection5Left">
           <img src={classRoom} alt="img"></img>
         </div>
