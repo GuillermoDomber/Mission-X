@@ -1,0 +1,78 @@
+.dashboardNavBar_outer_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 6vh;
+    padding: 0 38px;
+    /* min-height: 62px; */
+    background-color: var(--white);
+
+    /* border: 2px solid red; */
+}
+
+.dashboard_navbar_logo{
+    height: 60px;
+    padding: 3px 0;
+    object-fit: contain;
+
+    /* border: 2px solid red; */
+}
+
+.dashboard_progressTracker_container{
+    margin-left: 20px;
+    margin-right: auto;
+    margin-bottom: 2px;
+    display: flex;
+    align-self: flex-end;
+
+    /* border: 2px solid red; */
+}
+
+.dashboard_progressTracker{
+    height: 40px;
+    align-self: flex-end;
+}
+
+.dashboard_nav_btns_container{
+    display: flex;
+    align-items: center;
+    align-self: flex-end;
+    margin-bottom: 5px;
+    gap: 27px;
+
+    /* border: 2px solid red; */
+}
+
+.dashboard_btns{
+    height: 35px;
+    width: 150px;
+    background-color: orange;
+    color: var(--white);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bolder;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+.pink{
+    background-color: rgb(240, 0, 168) ;
+}
+
+.blue{
+    background-color: rgb(13, 140, 238);
+}
+
+.dashboard_navbar_flags_container{
+    display: flex;
+    gap: 8px;
+    align-self: flex-start;
+    margin-top: 9px;
+    margin-left: 38px;
+}
+
+.navbar_flags{
+    height: 12px;
+}

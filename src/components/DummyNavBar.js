@@ -4,7 +4,9 @@ import { Link } from "react-router-dom";
 import styles from "./DummyNavBar.module.css"
 export default function DummyNavBar() {
   return (
-    <div className={styles.DummyNavBar}>
+
+    <div className="dummyNavBar">
+
       <Link to="/">HomePage</Link>
       <Link to="/StudentDashboard" className="Links">
         StudentDashboard
