@@ -6,7 +6,7 @@ export default function HomeSection4() {
   const [selected, setSelected] = useState(0);
 
   return (
-    <div className="home-colum">
+    <div className="home-colum home-help">
       <div className="home-feature-centre-title">
         How our programe help teachers and schools
       </div>

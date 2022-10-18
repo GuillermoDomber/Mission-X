@@ -5,6 +5,8 @@ import DigitalTechnologies from "./Slides/DigitalTechnologies";
 import KeyCompetencies from "./Slides/KeyCompetencies";
 import IR4 from "./Slides/IR4.0";
 
+import "./Slides/Slides.css"
+
 const slides = [LearningPath, DigitalTechnologies, KeyCompetencies, IR4];
 const buttonLabels = [
   "LEARNING PATHWAYS",
