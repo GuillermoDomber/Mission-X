@@ -11,6 +11,8 @@ import StudentProfileViewer from "./pages/StudentProfileViewer";
 
 
 function App() {
+  
+
   return (
     <div className="App">
       <BrowserRouter>
