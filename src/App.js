@@ -5,7 +5,11 @@ import "./App.css";
 import Home from "./pages/Home";
 import StudentDashboard from "./pages/StudentDashboard";
 import StudentProjectLibrary from "./pages/StudentProjectLibrary";
+
 import StudentProfileViewer from "./pages/StudentProfileViewer";
+
+
+
 function App() {
   return (
     <div className="App">
@@ -18,10 +22,12 @@ function App() {
             path="/StudentProjectLibrary"
             element={<StudentProjectLibrary />}
           />
+
            <Route
             path="/StudentProfileViewer"
             element={<StudentProfileViewer></StudentProfileViewer>}
           ></Route>
+
         </Routes>
       </BrowserRouter>
     </div>

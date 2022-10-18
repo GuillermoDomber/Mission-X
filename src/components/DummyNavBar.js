@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+
 import styles from "./DummyNavBar.module.css"
 export default function DummyNavBar() {
   return (

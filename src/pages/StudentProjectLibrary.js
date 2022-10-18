@@ -1,4 +1,5 @@
 import React from 'react'
+
 import HeaderJg from './HeaderJg/HeaderJg'
 import ProjectTitleJG from './StudentProjectLibrary1/ProjectsTitleJG'
 import styles from './StudentProjectLibrary.module.css'
@@ -14,5 +15,6 @@ export default function StudentProjectLibrary() {
       <ProjectsLibraryJG></ProjectsLibraryJG>
     </div>
   </div>
+
   )
 }
