@@ -1,8 +1,8 @@
-import HeaderJG from "./HeaderJg";
+import HeaderJG from "./HeaderJg/HeaderJg";
 import styles from "./StudentProfileViewer.module.css";
-import kidImg from "../../assets/libPhoto/RawiriFletcher.png";
-import Edit from "../../assets/libPhoto/EditProfile.jpg";
-import Change from "../../assets/libPhoto/ChangePhoto.jpg";
+import kidImg from "../assets/libPhoto/RawiriFletcher.png";
+import Edit from "../assets/libPhoto/EditProfile.jpg";
+import Change from "../assets/libPhoto/ChangePhoto.jpg";
 import { Link } from "react-router-dom";
 
 
@@ -43,7 +43,7 @@ export default function StudentProfileViewer() {
         </div>
       </div>
       <div className={styles.backToProject}>
-        <button className={styles.btp} ><Link className={styles.link} to='/'>BACK TO PROJECTS</Link></button>
+        <button className={styles.btp} ><Link className={styles.link} to='/StudentProjectLibrary'>BACK TO PROJECTS</Link></button>
       </div>
     </div>
   );

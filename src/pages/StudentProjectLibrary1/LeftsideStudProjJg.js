@@ -3,7 +3,8 @@ export default function LeftSideStudProjJg() {
   return (
     <div className={styles.leftside}>
       
-      <p>SUBSCRIPTION</p>
+
+      <p className={styles.subscription}>SUBSCRIPTION</p>
       <hr></hr>
       <div>
         <input type="checkbox" className={styles.checkTop}></input>

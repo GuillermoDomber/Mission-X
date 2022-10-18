@@ -32,12 +32,14 @@ export default function HeaderJG() {
     }
   });
 
+  const newLocal = '/StudentProfileViewer';
   return (
     <div>
       <nav className={styles.navBarHeader}>
         <div className={styles.leftNav}>
           <img src={logo} alt='logo'></img>
         </div>
+   
         <div className={styles.centerNav}>
           <p>HOME</p>
           <p>PROJECTS</p>
@@ -58,7 +60,7 @@ export default function HeaderJG() {
               <p className={styles.Rflet}>RAWIRI FLETCHER</p>
               {show === true ? (
               <ul className={styles.dropDown}>
-                <li><Link className={styles.link} to='/StudentProfileViewer'>My Profile</Link></li>
+                <li><Link className={styles.link} to={newLocal}>My Profile</Link></li>
                 <li>Settings</li>
                 <li>Log out</li>
               </ul>
