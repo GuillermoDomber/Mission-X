@@ -1,18 +1,15 @@
 import { Routes, Route } from "react-router-dom";
 import { BrowserRouter } from "react-router-dom";
-import DummyNavBar from "./components/DummyNavBar";
+
 import "./App.css";
+
 import Home from "./pages/Home";
+import DummyNavBar from "./components/DummyNavBar";
 import StudentDashboard from "./pages/StudentDashboard";
 import StudentProjectLibrary from "./pages/StudentProjectLibrary";
-
 import StudentProfileViewer from "./pages/StudentProfileViewer";
 
-
-
 function App() {
-  
-
   return (
     <div className="App">
       <BrowserRouter>
@@ -24,12 +21,10 @@ function App() {
             path="/StudentProjectLibrary"
             element={<StudentProjectLibrary />}
           />
-
-           <Route
+          <Route
             path="/StudentProfileViewer"
-            element={<StudentProfileViewer></StudentProfileViewer>}
-          ></Route>
-
+            element={<StudentProfileViewer />}
+          />
         </Routes>
       </BrowserRouter>
     </div>

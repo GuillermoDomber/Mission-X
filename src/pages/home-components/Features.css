@@ -1,3 +1,4 @@
+
 .home-feature-column {
   width: 70%;
 }
@@ -36,6 +37,8 @@
 .home-feature-bigButtons {
   padding-left: 190px;
 }
+
+
 .roundButton {
   outline-style: initial;
   border-radius: 100px;
@@ -45,11 +48,11 @@
   background-color: white;
   border: 1px solid #000;
   margin-right: 10px;
+  /* justify-content: center; */
 }
 
-.home-hero-info {
-  align-self: flex-start;
-  width: 60%;
+.home-feature-info {
+  font-family: "Open Sans", sans-serif;
 }
 .home-feature-centre-title {
   font-size: 30px;

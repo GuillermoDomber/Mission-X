@@ -1,4 +1,5 @@
 import React from "react";
+import "../Home.css"
 
 const Navigation = ({ position = 0, items = [], onClick }) => {
   return (
@@ -21,7 +22,7 @@ export default function Carousel({
   ...props
 }) {
   return (
-    <div className="carousel" {...props}>
+    <div className="home-column carousel" {...props}>
       <img alt="img" style={{ width: "100%" }} src={items[position]} />
       <Navigation items={items} position={position} onClick={onNavigate} />
     </div>

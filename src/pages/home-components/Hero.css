@@ -1,8 +1,9 @@
 .home-hero-image {
+  font-family: "Open Sans", sans-serif;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 400px;
+  height: 450px;
 }
 
 .home-hero-info {
@@ -13,10 +14,15 @@
 .home-hero-title {
   padding-top: 50px;
   padding-bottom: 25px;
-  font-size: 42px;
+  font-size: 38px;
   padding-left: 190px;
-  padding-right: 190px;
-  text-align: justify;
+  padding-right: 150px;
+  text-align:left;
+}
+.futureBlue {
+
+  font-size: 38px;
+  color: blue;
 }
 .home-hero-text {
   padding-bottom: 25px;
@@ -26,6 +32,7 @@
   text-align: justify;
 }
 .home-hero-sm-text {
+  font-family: "Open Sans", sans-serif;
   font-size: 8px;
   margin-left: 30px;
   margin-top: 5px;
@@ -36,7 +43,4 @@
 }
 .home-sign-up {
   width: 175px;
-}
-.futureBlue {
-  color: blue;
 }

@@ -3,16 +3,16 @@ import "./Footer.css";
 export default function Footer() {
   return (
     <div className="footer">
-      <div className="footerSec1">
-        <div>COMPANY</div>
+      <div className="footerSec">
+        <div className="footer-title">COMPANY</div>
         <br />
         <div>About Us</div>
         <div>Careers</div>
         <div>Partners</div>
       </div>
 
-      <div className="footerSec2">
-        <div>COURSES</div>
+      <div className="footerSec">
+        <div className="footer-title">COURSES</div>
         <br />
         <div>Register</div>
         <div>Login</div>
@@ -22,23 +22,23 @@ export default function Footer() {
         <div>Resources</div>
       </div>
 
-      <div className="footerSec3">
-        <div>SUPPORT</div>
+      <div className="footerSec">
+        <div className="footer-title">SUPPORT</div>
         <br />
         <div>FAQs</div>
         <div>Helpdesk</div>
         <div>Contact Us</div>
       </div>
 
-      <div className="footerSec4">
-        <div>LEGAL</div>
+      <div className="footerSec">
+        <div className="footer-title">LEGAL</div>
         <br />
         <div>Terms & Conditions</div>
         <div>Privacy Policy</div>
       </div>
 
-      <div className="footerSec5">
-        <div>LevelUp Works</div>
+      <div className="footerSec footer-last-sec">
+        <div className="footer-title">LevelUp Works</div>
         <div>
           LevelUp Works is an Auckland-based enterprise dedicated to developing
           game-based learning software to help teachers in response to the New

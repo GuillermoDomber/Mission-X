@@ -1,45 +1,45 @@
-.homeSection5 {
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: row;
-  /* margin: 0px 20rem 0px 20rem; */
+.home-signup {
+  align-items: center;
+  /* margin-left: 15%; */
+  justify-content: center;
+  margin-top: 80px;
+
 }
-.homeSection5Left {
-  margin: 0rem 0rem 0rem 0rem;
+.home-signup-img {
+  margin-left: 200px;
+  margin-bottom: 110px;
 }
-.homeSection5Right {
-  margin: 0rem 0rem 0rem 0rem;
+
+.home-signup-info {
+  align-self: flex-start;
+  width: 60%;
+  font-family: "Open Sans", sans-serif;
+  height: 450px;
+
 }
-.homeSection5Title {
-  padding: 0px 0px 0px 400px;
-  /* width: 1000px; */
-  font-size: 42px;
-  margin-top: 100px;
-  text-align: justify;
+
+.home-signup-title {
+  padding-top: 50px;
+  padding-bottom: 25px;
+  font-size: 38px;
+  padding-left: 190px;
+  padding-right: 150px;
+  text-align: left;
 }
-.homeSection5Text {
-  text-align: justify;
-  padding: 0px 0px 0px 400px;
-  /* width: 1000px; */
+
+.home-signup-text {
+  padding-bottom: 25px;
   font-size: 20px;
+  padding-left: 190px;
+  padding-right: 190px;
+  text-align: justify;
 }
-.homeSection5Buttons {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  padding: 10px 0px 0px 400px;
-  /* width: 900px; */
-  margin-top: 10px;
+
+.home-signup-actions {
+  margin-top: 50px;
+  text-align: center;
+  margin-left: 200px;
+  width: 60%;
+
 }
-.homeSection5ButtonLearn {
-  top: 381px;
-  left: 398px;
-  /* width: 175px; */
-  height: 35px;
-}
-.homeSection5ButtonSign {
-  top: 381px;
-  left: 645px;
-  /* width: 175px; */
-  height: 35px;
-}
+

@@ -1,17 +1,4 @@
+.home-help {
+  font-family: "Open Sans", sans-serif;
 
-
-.homeSection4 {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  margin: 0px 20rem 0px 20rem;
-}
-.homeSection4Title {
-  font-size: 42px;
-  margin: 50px;
-}
-.homeSection4Buttons {
-  display: flex;
-  justify-content: space-evenly;
-  flex-direction: row;
 }

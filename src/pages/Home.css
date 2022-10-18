@@ -1,20 +1,29 @@
+
 .home-column {
+  font-weight: bold;
+
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 
 .home-row {
+  font-weight: bold;
+
   display: flex;
   width: 100%;
 }
 
 .home-flex-center {
+  font-weight: bold;
+
   align-items: center;
   justify-content: center;
 }
 
 .button {
+  font-weight: bold;
+
   background: none;
   background-color: white;
   border: 2px solid rgb(75, 193, 244);
@@ -48,18 +57,12 @@
   border: 2px solid rgb(239, 239, 241);
 }
 
-.home-slider-nav {
-  justify-content: center;
-}
-.home-slides {
-  background: #ebeaea;
-  text-align: justify;
-  padding-left: 25%;
-  padding-right: 25%;
-  margin-top: 15px;
-  height: 630px;
-  padding-top: 70px;
-}
 .homeSec2ImgBtn {
   width: 70%;
 }
+
+.carousel {
+  align-items: center;
+  padding-top: 2%;
+}
+
