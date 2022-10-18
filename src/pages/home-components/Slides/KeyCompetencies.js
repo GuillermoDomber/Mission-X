@@ -1,9 +1,7 @@
-import "./HomeSection4-Slide.css";
-
 export default function Slide3() {
   return (
     <>
-      <div className="homeSlides">
+      <div className="home-slides">
         <div className="homeSlidesTitle">Enhance key competencies</div>
         <div className="homeSlidesText">
           The programme enhances capabilities of students in the 5 Key

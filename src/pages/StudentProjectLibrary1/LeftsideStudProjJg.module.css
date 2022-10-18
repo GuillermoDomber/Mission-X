@@ -1,0 +1,40 @@
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Nunito&family=Open+Sans&display=swap');
+
+.leftside{
+color: #767676;
+margin: 10px 0 0 205px;
+font-family: 'Open Sans', sans-serif;
+background-color: pink;
+}
+
+hr{
+margin-top: -30px;
+    width: 169px;
+
+}
+
+.checkTop{
+margin: 14px 14px 0 0;
+
+    
+}
+.checkBot{
+background-color: pink;
+    margin: 3px 14px 0 0;
+}
+.category{
+font-family: 'Open Sans', sans-serif;
+    margin-top: 50px;
+    font-style: 16px;
+margin-right:20px ; 
+}
+span{
+    font-size: 14px;
+    
+}
