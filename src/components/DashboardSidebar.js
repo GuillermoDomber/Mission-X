@@ -16,6 +16,11 @@ import ProgressTracker from '../pages/teacherDashboard-components/TeacherDashboa
 
 
 //===============IMPORTING IMAGES========================================
+import arrowLeft from '../assets/DashboardSidebar/arrowLeft.png'
+import profile from '../assets/DashboardSidebar/profile.png'
+import settings from '../assets/DashboardSidebar/settings.png'
+import logout from '../assets/DashboardSidebar/logout.png'
+
 //Student----------------------------------------------------------
 import learningObjectives from '../assets/DashboardSidebar/learningObjectives.png'
 import learningObjectivesSelected from '../assets/DashboardSidebar/learningObjectivesSelected.png'
@@ -195,8 +200,15 @@ const buttons = pageDirectory.map((item, index) => {
     <div className={isExpanded ? styles.sidebar_container : `${styles.sidebar_container} ${styles.collapsed}`}>
       
       {buttons}
+
       <div className={styles.sidebar_arrow_container} onClick={handleSidebarToggle}>
-        <div className={styles.sidebar_arrow}></div>
+        <div className={styles.sidebar_arrow}><img src={arrowLeft} /></div>
+      </div>
+
+      <div className={styles.sidebar_settings_icons_container}>
+        <div className={styles.sidebar_settings_icons}><img src={profile} /><p>Profile</p></div>
+        <div className={styles.sidebar_settings_icons}><img src={settings} /><p>Settings</p></div>
+        <div className={styles.sidebar_settings_icons}><img src={logout} /><p>Log out</p></div>
       </div>
     
     </div>
