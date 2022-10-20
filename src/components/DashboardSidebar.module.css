@@ -7,7 +7,7 @@
     width: 30px;
     background-color: var(--darker-blue);
     color: var(--white);
-    padding:20px 0;
+    /* padding:20px 0; */
     position: relative;
 }
 
@@ -15,6 +15,27 @@
     width: 52px;
     max-width: 52px;
     min-width: 7rem;
+}
+
+
+/* ------------------STUDENT PROFILE PHOTO---------------------------- */
+.studentPhoto_container{
+    height: 15%;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid red; */
+}
+
+.studentPhoto{
+    height: 80%;
+
+}
+
+.sidebar_container.collapsed .studentPhoto{
+    height: 65%;
+    padding: 0;
 }
 
 /* ------------------SIDEBAR BUTTONS---------------------------- */

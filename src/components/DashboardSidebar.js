@@ -22,6 +22,7 @@ import settings from '../assets/DashboardSidebar/settings.png'
 import logout from '../assets/DashboardSidebar/logout.png'
 
 //Student----------------------------------------------------------
+import studentPhoto from '../assets/DashboardSidebar/RawiriFletcher.png'
 import learningObjectives from '../assets/DashboardSidebar/learningObjectives.png'
 import learningObjectivesSelected from '../assets/DashboardSidebar/learningObjectivesSelected.png'
 import instructions from '../assets/DashboardSidebar/instructions.png'
@@ -199,6 +200,10 @@ const buttons = pageDirectory.map((item, index) => {
   return (
     <div className={isExpanded ? styles.sidebar_container : `${styles.sidebar_container} ${styles.collapsed}`}>
       
+      <div className={styles.studentPhoto_container}>
+        <img src={studentPhoto} className={styles.studentPhoto} />
+      </div>
+
       {buttons}
 
       <div className={styles.sidebar_arrow_container} onClick={handleSidebarToggle}>
