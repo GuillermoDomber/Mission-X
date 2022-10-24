@@ -105,7 +105,7 @@
 transform: rotate(180deg);
 }
 
-/* ------------------SIDEBAR ARROW BUTTON---------------------------- */
+/* ------------------SIDEBAR SETTINGS ICONS---------------------------- */
 
 .sidebar_settings_icons_container{
 display: flex;
@@ -133,7 +133,10 @@ font-weight: bolder;
 .sidebar_settings_icons{
 display: flex;
 flex-direction: column;
+cursor: pointer;
+text-decoration: none;
 }
+
 
 .sidebar_settings_icons img{
     height: 15px;
@@ -146,7 +149,10 @@ flex-direction: column;
     display: none;
 }
 
-
+.sidebar_link{
+    text-decoration: none;
+    color: var(--white)
+}
 
 
 

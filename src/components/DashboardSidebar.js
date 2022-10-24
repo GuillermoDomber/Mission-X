@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import styles from './DashboardSidebar.module.css';
 import SidebarButton from './DashboardSidebar_Button'
 
@@ -213,9 +214,12 @@ const buttons = pageDirectory.map((item, index) => {
       <div className={styles.sidebar_settings_icons_container}>
         <div className={styles.sidebar_settings_icons}><img src={profile} /><p>Profile</p></div>
         <div className={styles.sidebar_settings_icons}><img src={settings} /><p>Settings</p></div>
-        <div className={styles.sidebar_settings_icons}><img src={logout} /><p>Log out</p></div>
+        <Link to="/" className={styles.sidebar_link}><div className={styles.sidebar_settings_icons}><img src={logout} /><p>Log out</p></div></Link>
       </div>
     
     </div>
   )
 }
+
+
+ 
