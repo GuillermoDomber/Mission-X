@@ -14,6 +14,7 @@ export default function DummyNavBar() {
       <Link to="/StudentProjectLibrary" className="Links">
         StudentProjectLibrary
       </Link>
+      <Link to="/TeacherDashboard" className="Links">TeacherDashboard</Link>
 
       <div>DummyNavBar</div>
     </div>

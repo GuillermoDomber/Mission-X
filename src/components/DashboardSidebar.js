@@ -181,6 +181,7 @@ if (window.location.pathname === "/StudentDashboard"){
     pageDirectory= teacherArray
 }
 
+
 //MAPPING OF THR BUTTONS FROM THE ARRAYS-----------------------------------
 //do I use the index to add a key???
 const buttons = pageDirectory.map((item, index) => {

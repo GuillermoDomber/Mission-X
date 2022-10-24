@@ -8,6 +8,7 @@ import DummyNavBar from "./components/DummyNavBar";
 import StudentDashboard from "./pages/StudentDashboard";
 import StudentProjectLibrary from "./pages/StudentProjectLibrary";
 import StudentProfileViewer from "./pages/StudentProfileViewer";
+import TeacherDashboard from "./pages/TeacherDashboard"
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
             path="/StudentProfileViewer"
             element={<StudentProfileViewer />}
           />
+          <Route path="/TeacherDashboard" element={<TeacherDashboard />} />
         </Routes>
       </BrowserRouter>
     </div>
