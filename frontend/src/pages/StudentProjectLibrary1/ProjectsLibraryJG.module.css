@@ -1,0 +1,63 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Open+Sans&display=swap');
+.rightSide {
+  width: 100%;
+  background-color: pink;
+  margin: 0px 0 0 130px;
+}
+.topButtons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.begBtn,.intBtn,.advBtn{
+  width: 116px;
+  border: none;
+}
+.begBtn {
+  border-radius: 3px 0 0 3px;
+}
+.begBtn:focus ,.intBtn:focus,.advBtn:focus{
+    background-color:#00BFFF;
+}
+.intBtn {
+
+  border-left: solid lightgrey;
+  border-right: solid lightgrey;
+}
+
+.advBtn {
+  border-radius: 0 3px 3px 0;
+}
+.rightButton {
+  
+  margin-right: 170px;
+}
+.number25,.number50,.number100{
+  width: 51px;
+  border: none;
+}
+
+.number50 {
+  border-top: none;
+  border-bottom: none;
+  border-left: solid lightgrey;
+  border-right: solid lightgrey;
+}
+.number25:focus,.number50:focus,.number100:focus{
+    background-color:#00BFFF;
+}
+.bottomProjects {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid red;
+  height: 100%;
+}
+
+.introPic {
+  height: 200px;
+}

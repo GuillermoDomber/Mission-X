@@ -1,0 +1,113 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Open+Sans&display=swap');
+
+.leftRight {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 100vh;
+}
+
+.leftBody {
+  margin: 139px 35px 0 0;
+  background-color: white;
+  width: 360px;
+  height: 575px;
+  border: 2px solid #e2dfdf;
+  border-radius: 30px;
+    display: flex;
+  flex-direction: column;
+align-items: center;
+
+
+}
+
+.rightBody {
+  margin: 139px 40px 0 35px;
+  height: 712px;
+  width: 820px;
+  background-color: white;
+  border: 2px solid #e2dfdf;
+  border-radius: 30px;
+}
+
+.kidImg{
+    width: 175px;
+    margin: 82px 0 69px 0;
+
+}
+.button1,.button2{
+ margin: 0 0 34px 0;
+
+}
+h1{
+  font-family: 'Nunito', sans-serif;
+  color: #707070;
+  font-size: 60px;
+  margin: 54px 0 65px 0;
+  text-align: center;
+
+}
+.bottomContent{
+display: flex;
+flex-direction: row;
+justify-content: center;
+  
+
+}
+.leftTitle{
+  color:#A5A5A5 ;
+  font-family: 'Nunito', sans-serif;
+font-size: 30px;
+margin: 0 110px 0 40px;
+
+
+font-weight: bolder;
+  
+}
+.pTag{
+  margin-bottom: 38px;
+}
+.rightTitle{
+  color:#707070 ;
+  font-family: "Open Sans", sans-serif;
+font-size: 30px;
+font-weight:900;
+margin: 0 0 38px 100px;
+
+}
+
+.mainBody{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-color: #EEEEEE;
+
+}
+.backToProject{
+ display: flex;
+ flex-direction: row-reverse;
+ 
+}
+.btp{
+  margin: -50px 350px 0 0;
+  height: 35px;
+  width: 200px;
+  background-color: #F32083;
+  border: none;
+  border-radius: 8px;
+  font-weight: 800;
+
+}
+
+.link{
+ 
+    text-decoration: none;
+    color: white
+  
+  }
