@@ -94,7 +94,13 @@ export default function DashboardNavBar() {
 
   
       <div className={`${styles.dashboard_progressTracker_container} ${buttonsToDisplay ===  navButtonsArrayTeacher && styles.dashboard_progressTracker_container_hidden}`} >
-        <img src={ProjectTrackerPlaceholder} className={styles.dashboard_progressTracker} alt="Progress Tracker Placeholder"/>
+        {/* <img src={ProjectTrackerPlaceholder} className={styles.dashboard_progressTracker} alt="Progress Tracker Placeholder"/> */}
+        <div className={styles.tracker_text_container}>
+          <div className={styles.tracker_text_title}>PROJECT</div>
+          {/* This should be a dynamic name value depending on the project selected. */}
+          <div className={styles.tracker_text_sub}>Introduction</div>
+
+        </div>
         {trackerButtons}
         {/* <div className={styles.dot}></div> */}
       </div>
