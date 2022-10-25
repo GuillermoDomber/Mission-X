@@ -1,22 +1,44 @@
 
-
+/* -------------SIDEBAR OUTER CONTAINER----------------------- */
 .sidebar_container{
     height: 100vh;
     height: 100%;
     min-width: 280px;
     width: 30px;
     background-color: var(--darker-blue);
-    color: white;
-    padding:20px 0;
+    color: var(--white);
+    /* padding:20px 0; */
+    position: relative;
 }
 
 .sidebar_container.collapsed{
     width: 52px;
     max-width: 52px;
     min-width: 7rem;
-    
 }
 
+
+/* ------------------STUDENT PROFILE PHOTO---------------------------- */
+.studentPhoto_container{
+    height: 15%;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid red; */
+}
+
+.studentPhoto{
+    height: 80%;
+
+}
+
+.sidebar_container.collapsed .studentPhoto{
+    height: 65%;
+    padding: 0;
+}
+
+/* ------------------SIDEBAR BUTTONS---------------------------- */
 .sidebar_button{
     display: flex;
     justify-content: flex-start;
@@ -26,8 +48,7 @@
     padding:12px 0;
     padding-left:20px;
     /* height: 100%; */
-    cursor: pointer;
-    
+    cursor: pointer;    
 }
 
 .sidebar_container.collapsed .sidebar_button{
@@ -36,19 +57,9 @@
 }
 
 .sidebar_button_clicked{
-    /* background-color: rgb(0, 0, 169); */
     background-color: var(--lighter-blue);
-    /* background-image: linear-gradient(to right, rgba(0, 26, 255, 0.2) 5%, rgb(242, 242, 242)  ); */
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    margin-left: 10px;
-    
     color: grey;
-    box-shadow: 
-     inset 0px 11px 8px -10px rgba(0, 0, 0, 0.3),
-     inset 0px -11px 8px -10px rgba(0, 0, 0, 0.3); 
 }
-
 
 .sidebar_button_image{
     width: 40px;
@@ -59,13 +70,17 @@
     width: 48px;
 }
 
+.sidebar_container.collapsed .sidebar_text{
+    display: none;
+}
+
+/* ------------------SIDEBAR ARROW BUTTON---------------------------- */
 .sidebar_arrow_container{
     display: flex;
     justify-content: flex-end;
-    margin-top: 10%;
+    margin-top: 5%;
     
-    /* border: 3px solid magenta; */
-
+    /* border: 2px solid magenta; */
 }
 
 .sidebar_container.collapsed .sidebar_arrow_container{
@@ -74,24 +89,74 @@
     
 }
 
-
 .sidebar_arrow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: var(--lighter-blue);
     width: 4.5rem;
     height: 4.2rem;
     border-radius: 10px 0 0 10px;
     margin-top: 15px;
-    /* box-shadow: 
-      0px 11px 8px -10px rgba(0, 0, 0, 0.7),
-      0px -11px 8px -10px rgba(0, 0, 0, 0.7);  */
     cursor: pointer;
-
 }
 
 .sidebar_container.collapsed .sidebar_arrow{
 transform: rotate(180deg);
 }
 
-.sidebar_container.collapsed .sidebar_text{
+/* ------------------SIDEBAR SETTINGS ICONS---------------------------- */
+
+.sidebar_settings_icons_container{
+display: flex;
+justify-content: space-around;
+align-items: center;
+width: 100%;
+margin-bottom: 10%;
+padding: 0 21px;
+position: absolute;
+bottom: 0;
+font-family: 'Open sans', sans-serif;
+font-size: 14px;
+font-weight: bolder;
+/* border: 2px solid red; */
+}
+
+.sidebar_container.collapsed .sidebar_settings_icons_container{
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 35%;
+    scale: 1.2;
+
+}
+
+.sidebar_settings_icons{
+display: flex;
+flex-direction: column;
+cursor: pointer;
+text-decoration: none;
+}
+
+
+.sidebar_settings_icons img{
+    height: 15px;
+    width: auto;
+    object-fit: contain;
+    margin-bottom: 5%;
+}
+
+.sidebar_container.collapsed p{
     display: none;
+}
+
+.sidebar_link{
+    text-decoration: none;
+    color: var(--white)
+}
+
+
+
+/* THIS CAN BE REMOVED WHEN JERVIN MERGES HIS CHANGES */
+.sidebar_container p{
+    margin: 0;
 }

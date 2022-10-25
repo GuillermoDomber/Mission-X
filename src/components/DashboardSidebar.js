@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import styles from './DashboardSidebar.module.css';
 import SidebarButton from './DashboardSidebar_Button'
 
@@ -16,7 +17,13 @@ import ProgressTracker from '../pages/teacherDashboard-components/TeacherDashboa
 
 
 //===============IMPORTING IMAGES========================================
+import arrowLeft from '../assets/DashboardSidebar/arrowLeft.png'
+import profile from '../assets/DashboardSidebar/profile.png'
+import settings from '../assets/DashboardSidebar/settings.png'
+import logout from '../assets/DashboardSidebar/logout.png'
+
 //Student----------------------------------------------------------
+import studentPhoto from '../assets/DashboardSidebar/RawiriFletcher.png'
 import learningObjectives from '../assets/DashboardSidebar/learningObjectives.png'
 import learningObjectivesSelected from '../assets/DashboardSidebar/learningObjectivesSelected.png'
 import instructions from '../assets/DashboardSidebar/instructions.png'
@@ -174,6 +181,7 @@ if (window.location.pathname === "/StudentDashboard"){
     pageDirectory= teacherArray
 }
 
+
 //MAPPING OF THR BUTTONS FROM THE ARRAYS-----------------------------------
 //do I use the index to add a key???
 const buttons = pageDirectory.map((item, index) => {
@@ -194,11 +202,25 @@ const buttons = pageDirectory.map((item, index) => {
   return (
     <div className={isExpanded ? styles.sidebar_container : `${styles.sidebar_container} ${styles.collapsed}`}>
       
+      <div className={styles.studentPhoto_container}>
+        <img src={studentPhoto} className={styles.studentPhoto} />
+      </div>
+
       {buttons}
+
       <div className={styles.sidebar_arrow_container} onClick={handleSidebarToggle}>
-        <div className={styles.sidebar_arrow}></div>
+        <div className={styles.sidebar_arrow}><img src={arrowLeft} /></div>
+      </div>
+
+      <div className={styles.sidebar_settings_icons_container}>
+        <div className={styles.sidebar_settings_icons}><img src={profile} /><p>Profile</p></div>
+        <div className={styles.sidebar_settings_icons}><img src={settings} /><p>Settings</p></div>
+        <Link to="/" className={styles.sidebar_link}><div className={styles.sidebar_settings_icons}><img src={logout} /><p>Log out</p></div></Link>
       </div>
     
     </div>
   )
 }
+
+
+ 
