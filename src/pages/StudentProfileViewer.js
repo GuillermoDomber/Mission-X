@@ -23,20 +23,24 @@ export default function StudentProfileViewer() {
             <h1>Rawiri Fletcher</h1>
             <div className={styles.bottomContent}>
               <div className={styles.leftTitle}>
-                <p>School</p>
-                <p>Teacher</p>
-                <p>Course</p>
-                <p>Date of Birth</p>
-                <p>Contact No</p>
-                <p>Email Address</p>
+             
+                <p className={styles.pTag}>School</p>
+                <p className={styles.pTag}>Teacher</p>
+                <p className={styles.pTag}>Course</p>
+                <p className={styles.pTag}>Date of Birth</p>
+                <p className={styles.pTag}>Contact No</p>
+                <p className={styles.pTag}>Email Address</p>
+               
               </div>
               <div className={styles.rightTitle}>
-                <p>Homai School</p>
-                <p>Jasmina Salvador</p>
-                <p>Beginner</p>
-                <p>25 June 2010</p>
-                <p>022 524 63 99</p>
-                <p>fletchy.r@gmail.com</p>
+           
+                <p className={styles.pTag}>Homai School</p>
+                <p className={styles.pTag}>Jasmina Salvador</p>
+                <p className={styles.pTag}>Beginner</p>
+                <p className={styles.pTag}>25 June 2010</p>
+                <p className={styles.pTag}>022 524 63 99</p>
+                <p className={styles.pTag}>fletchy.r@gmail.com</p>
+             
               </div>
             </div>
           </div>
