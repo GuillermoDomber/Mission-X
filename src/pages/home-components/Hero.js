@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Hero.css";
 import background from "../../assets/Home/hero.png";
+import HomeModal from "../home-components/HomeModal"
+
 
 export default function Hero() {
+  const [openModal, setOpenModal] = useState(false)
   return (
     <>
       <div
@@ -21,7 +24,15 @@ export default function Hero() {
           <div className="home-row home-hero-actions">
             <button className="button">LEARN MORE</button>
             <div className="home-sign-up">
-              <button className="button button-accent">SIGN UP</button>
+              <button
+                className="button button-accent homeModal"
+                onClick={() => {
+                  setOpenModal(true);
+                }}
+              >
+                SIGN UP
+              </button>
+              {openModal && <HomeModal closeModal={setOpenModal} />}
               <div className="home-hero-sm-text">
                 *Basic subscription includes the first 15 projects free of
                 charge.

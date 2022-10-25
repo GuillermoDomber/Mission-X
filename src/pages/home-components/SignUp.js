@@ -1,7 +1,12 @@
 import classRoom from "../../assets/Home/classroom.png";
 import "./SignUp.css";
+import HomeModal from "../home-components/HomeModal"
+import { useState } from "react";
+
 
 export default function HomeSection5() {
+    const [openModal, setOpenModal] = useState(false)
+
   return (
     <>
       <div className="home-row home-signup">
@@ -19,7 +24,10 @@ export default function HomeSection5() {
           </div>
           <div className="home-row home-signup-actions">
             <button className="button">ENQUIRE NOW</button>
-            <button className="button button-accent">SIGN UP</button>
+            <button className="button button-accent" onClick={() => {
+                  setOpenModal(true);
+                }} >SIGN UP</button>
+            {openModal && <HomeModal closeModal={setOpenModal} />}
           </div>
         </div>
       </div>
