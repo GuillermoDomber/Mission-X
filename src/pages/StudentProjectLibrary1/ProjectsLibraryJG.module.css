@@ -14,65 +14,41 @@
   justify-content: space-between;
 }
 
-
-.begBtn {
-  border: 0;
+.begBtn,.intBtn,.advBtn{
   width: 116px;
-  border-radius: 3px 0 0 3px;
-
-  
-
+  border: none;
 }
-.begBtn:focus{
+.begBtn {
+  border-radius: 3px 0 0 3px;
+}
+.begBtn:focus ,.intBtn:focus,.advBtn:focus{
     background-color:#00BFFF;
 }
 .intBtn {
-  width: 116px;
-  border-top: none;
-  border-bottom: none;
+
   border-left: solid lightgrey;
   border-right: solid lightgrey;
 }
-.intBtn:focus{
-    background-color:#00BFFF;
-    
-}
+
 .advBtn {
-  width: 116px;
-  border: none;
   border-radius: 0 3px 3px 0;
 }
-.advBtn:focus{
-    background-color:#00BFFF;
-
-}
-
 .rightButton {
   
-  margin-right: 246px;
+  margin-right: 170px;
 }
-.number25 {
+.number25,.number50,.number100{
   width: 51px;
   border: none;
 }
-.number25:focus{
-    background-color:#00BFFF;
-}
+
 .number50 {
-  width: 51px;
   border-top: none;
   border-bottom: none;
   border-left: solid lightgrey;
   border-right: solid lightgrey;
 }
-.number50:focus{
-    background-color:#00BFFF;
-}
-.number100 {
-  width: 51px;
-  border: none;
-}
-.number100:focus{
+.number25:focus,.number50:focus,.number100:focus{
     background-color:#00BFFF;
 }
 .bottomProjects {

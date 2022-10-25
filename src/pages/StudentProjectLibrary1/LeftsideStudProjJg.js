@@ -5,78 +5,78 @@ export default function LeftSideStudProjJg() {
       
 
       <p className={styles.subscription}>SUBSCRIPTION</p>
-      <hr></hr>
+      <hr className={styles.leftsideHR}></hr>
       <div>
         <input type="checkbox" className={styles.checkTop}></input>
-        <span>Free</span>
+        <span className={styles.leftSpan}>Free</span>
       </div>
       <div>
         <input type="checkbox" className={styles.checkBot}></input>
-        <span>Premium</span>
+        <span className={styles.leftSpan}>Premium</span>
       </div>
 
       <p className={styles.category}>ACTIVITY TYPE</p>
-      <hr></hr>
+      <hr className={styles.leftsideHR}></hr>
       <div>
         <input type="checkbox" className={styles.checkTop}></input>
-        <span>Animation</span>
+        <span className={styles.leftSpan}>Animation</span>
       </div>
       <div>
         <input type="checkbox" className={styles.checkBot}></input>
-        <span>Game</span>
+        <span className={styles.leftSpan}>Game</span>
       </div>
       <div>
         <input type="checkbox" className={styles.checkBot}></input>
-        <span>Chatbot</span>
+        <span className={styles.leftSpan}>Chatbot</span>
       </div>
       <div>
         <input type="checkbox" className={styles.checkBot}></input>
-        <span>Augmented Reality</span>
+        <span className={styles.leftSpan}>Augmented Reality</span>
       </div>
 
       <p className={styles.category}>YEAR LEVEL</p>
-      <hr></hr>
+      <hr className={styles.leftsideHR}></hr>
       <div>
         <input type="checkbox" className={styles.checkTop}></input>
-        <span>1 - 4</span>
+        <span className={styles.leftSpan}>1 - 4</span>
       </div>
       <div>
         <input type="checkbox" className={styles.checkBot}></input>
-        <span>5 - 6</span>
+        <span className={styles.leftSpan}>5 - 6</span>
       </div>
       <div>
         <input type="checkbox" className={styles.checkBot}></input>
-        <span>7 - 8</span>
+        <span className={styles.leftSpan}>7 - 8</span>
       </div>
       <div>
         <input type="checkbox" className={styles.checkBot}></input>
-        <span>9 - 13</span>
+        <span className={styles.leftSpan}>9 - 13</span>
       </div>
       <p className={styles.category}>SUBJECT MATTER</p>
-      <hr></hr>
+      <hr className={styles.leftsideHR}></hr>
       <div>
         <input type="checkbox" className={styles.checkTop}></input>
-        <span>Computer Science</span>
+        <span className={styles.leftSpan}>Computer Science</span>
       </div>
       <div>
         <input type="checkbox" className={styles.checkBot}></input>
-        <span>Maths</span>
+        <span className={styles.leftSpan}>Maths</span>
       </div>
       <div>
         <input type="checkbox" className={styles.checkBot}></input>
-        <span>Science</span>
+        <span className={styles.leftSpan}>Science</span>
       </div>
       <div>
         <input type="checkbox" className={styles.checkBot}></input>
-        <span>Language</span>
+        <span className={styles.leftSpan}>Language</span>
       </div>
       <div>
         <input type="checkbox" className={styles.checkBot}></input>
-        <span>Art</span>
+        <span className={styles.leftSpan}>Art</span>
       </div>
       <div>
         <input type="checkbox" className={styles.checkBot}></input>
-        <span>Music</span>
+        <span className={styles.leftSpan}>Music</span>
       </div>
     </div>
   );
