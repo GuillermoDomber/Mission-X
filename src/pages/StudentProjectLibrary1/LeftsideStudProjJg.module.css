@@ -13,7 +13,7 @@ font-family: 'Open Sans', sans-serif;
 background-color: pink;
 }
 
-hr{
+.leftsideHR{
 
     width: 169px;
 
@@ -34,7 +34,7 @@ font-family: 'Open Sans', sans-serif;
     font-style: 16px;
 margin-right:20px ; 
 }
-span{
+.leftSpan{
     font-size: 14px;
     
 }
