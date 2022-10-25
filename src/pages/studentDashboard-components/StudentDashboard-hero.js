@@ -6,7 +6,7 @@ export default function StudentDashboardHero(props) {
     <div className={styles.studedentDashboard_hero_outer_container}>
 
         <div className={styles.studentDashboard_hero_displayArea} >
-            <span className={styles.hero_section_title}>This is the hero section</span>
+            <div className={styles.hero_section_title}><p>This is the hero section</p></div>
             {props.displayedHeroContent.componentToDisplay}
 
         </div>

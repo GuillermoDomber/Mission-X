@@ -43,7 +43,7 @@
     flex-direction: column;
     justify-content: center;
     margin-right: 15px;
-    background-color: pink
+    /* background-color: pink */
     /* border: 2px solid red; */
 }
 
@@ -62,7 +62,9 @@
     font-family: 'Open sans', sans-serif;
     color: var(--headings-font-color);
     font-size: 11px;
-    margin: 0;
+    font-weight: bold;
+    /* display: inline-block; */
+    margin: -6px 0;
     padding: 0;
     /* border: 2px solid magenta; */
 }
