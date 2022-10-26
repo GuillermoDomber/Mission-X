@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import { BrowserRouter } from "react-router-dom";
-
+import axios from "axios"
 import "./App.css";
 
 import Home from "./pages/Home";
@@ -11,10 +11,20 @@ import StudentProfileViewer from "./pages/StudentProfileViewer";
 import TeacherDashboard from "./pages/TeacherDashboard"
 
 function App() {
+
+const test = function(){
+  axios
+  .get("http://localhost:4000/login")
+  .then(() => {
+    console.log("connected:")
+})
+}
+
+
   return (
     <div className="App">
       <BrowserRouter>
-        <DummyNavBar />
+        <DummyNavBar test={test}/>
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="/StudentDashboard" element={<StudentDashboard />} />
@@ -31,6 +41,6 @@ function App() {
       </BrowserRouter>
     </div>
   );
-}
 
+  }
 export default App;
