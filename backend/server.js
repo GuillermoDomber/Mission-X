@@ -18,6 +18,9 @@ const pool = mysql.createPool({
     })
 
 
+    app.post("/login", (req, res) => {
+        console.log("connected to frontend")
+    });
 //BONNIE 
 
 
