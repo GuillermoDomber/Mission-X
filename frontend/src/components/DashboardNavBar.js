@@ -78,7 +78,7 @@ export default function DashboardNavBar() {
 
     const navButtons = buttonsToDisplay.map((item, index) => {
       return (
-        <div className={`${styles[item.id]} ${styles.navBarBtns}`}>{item.text}</div>
+        <div key={item.name} className={`${styles[item.id]} ${styles.navBarBtns}`}>{item.text}</div>
 
       )});
 

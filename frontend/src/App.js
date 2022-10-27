@@ -12,14 +12,14 @@ import TeacherDashboard from "./pages/TeacherDashboard"
 
 function App() {
 
-const test = function(){
-  axios
-  .get("http://localhost:4000/login")
+//TESTING THE CONNECTION TO THE FRONT END-------------//
+const test = () => {
+  axios.get("http://localhost:4000/test")
   .then(() => {
-    console.log("connected:")
+    console.log(`connected: `)
 })
 }
-
+//----------------------------------------------------//
 
   return (
     <div className="App">
