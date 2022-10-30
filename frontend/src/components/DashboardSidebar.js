@@ -14,6 +14,7 @@ import MakeProject from '../pages/studentDashboard-components/StudentDashboard_M
 import SubmitProject from '../pages/studentDashboard-components/StudentDashboard_SubmitProject';
 //Teacher----------------------------------------------------------
 import ProgressTracker from '../pages/teacherDashboard-components/TeacherDashboard_ProgressTracker';//////NEED TO CREATE AND IMPORT THE REST OF THESE
+import StudentProfiles from '../pages/teacherDashboard-components/TeacherDashboardStudentProfiles';
 
 
 //===============IMPORTING IMAGES========================================
@@ -88,6 +89,7 @@ export default function DashboardSidebar(props) {
       img: studentProfiles,
       imgSelected: studentProfilesSelected,
       text: "STUDENT PROFILES",
+      componentToDisplay: <StudentProfiles />
     },
     {
       id: "helpRequestsBtn",
@@ -186,6 +188,7 @@ if (window.location.pathname === "/StudentDashboard"){
 //do I use the index to add a key???
 const buttons = pageDirectory.map((item, index) => {
   return <SidebarButton
+  key={index}
   id={item.id}
   name={item.name}
   img={item.img}

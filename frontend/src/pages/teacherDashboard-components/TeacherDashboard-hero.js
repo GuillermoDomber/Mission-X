@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './StudentDashboard-hero.module.css'
+import styles from './TeacherDashboard-hero.module.css'
 
 export default function StudentDashboardHero(props) {
   return (

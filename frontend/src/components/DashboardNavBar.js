@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from 'react-router-dom'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import styles from "./DashboardNavBar.module.css";
 
 // IMAGE IMPORTS-----------------------
@@ -15,19 +15,69 @@ export default function DashboardNavBar() {
 
   //Mapped Project Tracker Buttons---------------------------
   const[progressTrackerBtn, setProgressTrackerBtn] = useState("4")
+  const [trackerBtnLocalStorage, setTrackerBtnLocalStorage] = useState([])
+  const [callStorage, setCallStorage]= useState(0)
 
   const trackerButtonsArrayStudent = 
-  [{id: "1"}, {id: "2"},{id: "3"},{id: "4"},{id: "5"},{id: "6"},{id: "7"},{id: "8"},{id: "9"},{id: "10"},{id: "11"},{id: "12"},{id: "13"},{id: "14"},{id: "15"}]
+  // [{id: "1"}, {id: "2"},{id: "3"},{id: "4"},{id: "5"},{id: "6"},{id: "7"},{id: "8"},{id: "9"},{id: "10"},{id: "11"},{id: "12"},{id: "13"},{id: "14"},{id: "15"}]
+  [{id: 1}, {id: 2},{id: 3},{id: 4},{id: 5},{id: 6},{id: 7},{id: 8},{id: 9},{id: 10},{id: 11},{id: 12},{id: 13},{id: 14},{id: 15}]
 
 
   //Need a second class for if the id is the same as the current project
-  const trackerButtons = trackerButtonsArrayStudent.map((item, index) => {
-    return (
-      <div className={progressTrackerBtn === item.id ? styles.dotSelected : styles.dot}><p className={styles.dot_text}>{item.id}</p></div>
+  // const trackerButtons = trackerButtonsArrayStudent.map((item, index) => {
+  //   return (
+  //     <div className={progressTrackerBtn === item.id ? styles.dotSelected : styles.dot}><p className={styles.dot_text}>{item.id}</p></div>
 
-    )});
+  //   )});
+
+    //How to get the tracker button to access local storage-----------------------
+    useEffect(() => {
+      console.log(localStorage.getItem('project-selected'))
+      setTrackerBtnLocalStorage(parseInt(localStorage.getItem('project-selected')))
+      console.log(trackerBtnLocalStorage)
+
+    }, []);
+
+    let trackerButtons =  trackerButtonsArrayStudent.map((item, index) => {
+      return (
+        <div className={styles.dot_outer} key={index}>
+          <div className={trackerBtnLocalStorage === item.id ? styles.dotSelected : styles.dot}><p className={styles.dot_text}>{item.id}</p></div>
+        </div>
+      )});
+
+      //TRYING DIFFERENT CLASSES TO CENTER IT 
+
+      // let trackerButtons =  trackerButtonsArrayStudent.map((item, index) => {
+      //   return (
+      //     <div className={styles.dot_outer}>
+      //       <div className={trackerBtnLocalStorage === item.id ? styles.dotSelected : styles.dot}></div>
+      //       <p className={styles.dot_text}>{item.id}</p>
+      //     </div>
+      //   )});
+
+      // let trackerButtons =  1
 
 
+    // useEffect(() => {
+    //   console.log(trackerBtnLocalStorage)
+
+    //    const trackerButtons = trackerButtonsArrayStudent.map((item, index) => {
+    //     return (
+          
+    //       <div className={trackerBtnLocalStorage === item.id ? styles.dotSelected : styles.dot}><p className={styles.dot_text}>{item.id}</p></div>
+    
+    //     )});
+    // }, []);
+
+    function removeThis(){
+      localStorage.setItem('project-selected', Math.floor(Math.random() * (15 - 1 + 1) + 1));
+      setCallStorage(Math.floor(Math.random() * (15 - 1 + 1) + 1));
+  
+    }
+
+    
+
+//------------------------------------------------------------------------------
 
 
   //Mapped nav buttons- Arrays---------------------------
@@ -102,6 +152,7 @@ export default function DashboardNavBar() {
 
         </div>
         {trackerButtons}
+        <button onClick={removeThis}>Change the storage</button>
         {/* <div className={styles.dot}></div> */}
       </div>
 

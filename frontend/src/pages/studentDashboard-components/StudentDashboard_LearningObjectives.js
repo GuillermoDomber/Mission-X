@@ -3,18 +3,34 @@ import { useEffect, useState } from 'react'
 
 export default function StudentDashboard_LearningObjectives() {
   const [lOContents, setLOContents] = useState();
+  const [localStorageValue, setLocalStorageValue] = useState([])
+
+ 
+  useEffect(() => {
+    console.log(localStorage.getItem('project-selected'))
+    setLocalStorageValue(parseInt(localStorage.getItem('project-selected')))
+    // console.log(localStorage)
+
+  }, []);
 
   useEffect(() => {
     fetch("http://localhost:4000/studentDashboard/learningObjective")
     .then((res) =>res.json())
     .then((resultsData) =>{
       //This method means will need to extract data/video path further down
+      
       console.log(resultsData);
-      console.log(resultsData[0].learning_objective);
+      console.log(localStorageValue);
+      // console.log(resultsData[0].learning_objective);
+      // console.log(resultsData[localStorage]);
       //This method means that data/video path has already been extracted.
-      setLOContents(resultsData[0].learning_objective)
+      // setLOContents(resultsData[0].learning_objective)
+      setLOContents(resultsData[localStorageValue - 1].learning_objective)
     });
-  }, []);
+  }, [localStorageValue]);
+
+
+  
 
   return (
     <div>

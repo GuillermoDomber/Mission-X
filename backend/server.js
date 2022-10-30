@@ -34,9 +34,11 @@ const pool = mysql.createPool({
 
 //Imported routes
 const studentDashboardRoutes = require("./routes/studentDashboardRoutes");
+const teacherDashboardRoutes = require("./routes/teacherDashboardRoutes");
 
 //Using routes
 app.use(studentDashboardRoutes);
+app.use(teacherDashboardRoutes);
 
 
 
