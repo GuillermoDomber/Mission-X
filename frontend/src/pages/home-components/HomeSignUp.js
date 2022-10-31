@@ -1,5 +1,4 @@
 import { useState, React } from "react";
-import axios from "axios";
 import { signup } from "../../api/auth";
 
 export default function HomeSignUp({ type }) {
@@ -54,7 +53,7 @@ export default function HomeSignUp({ type }) {
           required
         ></input>
       </div>
-      <button type="submit">Login</button>
+      <button type="submit">Sign Up</button>
     </form>
   );
 }
