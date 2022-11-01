@@ -1,17 +1,39 @@
-import React from "react";
-import HomeLogin from "./HomeLogin";
+import React, { useState } from "react";
+// import HomeLogin from "./HomeLogin";
+// import HomeSingUp from "./HomeSignUp";
+import "./HomeModal.css";
+// import students from "../../assets/LoginSignup/students.png";
+// import teachers from "../../assets/LoginSignup/teachers.png";
+import Authenticate from "./Authenticate";
+// import esc from "../../assets/LoginSignup/esc.png";
 
 function HomeModal({ closeModal }) {
+  const [selected, setSelected] = useState();
   return (
-    <>
-      <div className="home-column home-modal">
-        <button className="home-closeModal" onClick={() => closeModal(false)}>X</button>
-        <div className="home-students">Studentes</div>
-        <HomeLogin />
-        <div className="home-teachers">Teachers</div>
-        <HomeLogin />
+    <div className="home-modal">
+      <div className="home-modal-overlay" onClick={closeModal}></div>
+      <div className="home-modal-box">
+        <button className="home-closeModal" onClick={closeModal}>
+          X
+        </button>
+        <div className="home-row home-flex-center">
+          <div className="home-modal-student">
+            <Authenticate
+              type="student"
+              selected={selected}
+              onSelectForm={(s) => setSelected(s)}
+            />
+          </div>
+          <div className="home-modal-teacher">
+            <Authenticate
+              type="teacher"
+              selected={selected}
+              onSelectForm={(s) => setSelected(s)}
+            />
+          </div>
+        </div>
       </div>
-    </>
+    </div>
   );
 }
 
