@@ -18,8 +18,9 @@ const pool = mysql.createPool({
     })
 
 
-    app.post("/login", (req, res) => {
+    app.get("/login", (req, res) => {
         console.log("connected to frontend")
+        
     });
 //BONNIE 
 
@@ -50,9 +51,60 @@ const pool = mysql.createPool({
 
 
 //JERVIN
+//student project library
+app.get("/studentprojectlibrary", (req, res) => {
+    console.log("/studentprojlib checkpoint   ! 🙌");
+    pool.query("SELECT project_id,name, project_pic,course,activity_type FROM project;", (err, result) => {
+      if (err) return console.log("something is wrong",err);
+      console.log(result);
+      res.send(result);
+    });
+  });
+  //-----------testing beg-int-adv filter------------
+  //Beginner
+app.get("/studentprojectlibrary1", (req, res) => {
+    console.log("/studentprojlib checkpoint   ! 🙌");
+    pool.query("SELECT project_id,name, project_pic,course,activity_type FROM project WHERE course='Beginner';", (err, result) => {
+      if (err) return console.log("something is wrong",err);
+      console.log(result);
+      res.send(result);
+    });
+  });
+//intermediate
+  app.get("/studentprojectlibrary2", (req, res) => {
+    console.log("/studentprojlib checkpoint   ! 🙌");
+    pool.query("SELECT project_id,name, project_pic,course,activity_type FROM project WHERE course='Intermediate';", (err, result) => {
+      if (err) return console.log("something is wrong",err);
+      console.log(result);
+      res.send(result);
+    });
+  });
+//advanced
+  app.get("/studentprojectlibrary3", (req, res) => {
+    console.log("/studentprojlib checkpoint   ! 🙌");
+    pool.query("SELECT project_id,name, project_pic,course,activity_type FROM project WHERE course='Advanced';", (err, result) => {
+      if (err) return console.log("something is wrong",err);
+      console.log(result);
+      res.send(result);
+    });
+  });
 
 
 
+
+
+
+    //-----------^^^testing beg-int-adv filter^^^------------
+  //student profile viewer
+
+  app.get("/studentprofileviewer", (req, res) => {
+    console.log("/studentprofile checkpoint   ! 🙌");
+    pool.query("SELECT *FROM student INNER JOIN teacher using (teacher_id) WHERE student_id=12;", (err, result) => {
+      if (err) return console.log("something is wrong",err);
+      console.log(result);
+      res.send(result);
+    });
+  });
 
 
 

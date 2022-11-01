@@ -4,14 +4,17 @@
 }
 @import url('https://fonts.googleapis.com/css2?family=Nunito&family=Open+Sans&display=swap');
 .rightSide {
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  background-color: pink;
-  margin: 0px 0 0 130px;
+  /* background-color: pink; */
+  margin: 10px 170px 80px 130px;
 }
 .topButtons {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+ 
 }
 
 .begBtn,.intBtn,.advBtn{
@@ -33,10 +36,7 @@
 .advBtn {
   border-radius: 0 3px 3px 0;
 }
-.rightButton {
-  
-  margin-right: 170px;
-}
+
 .number25,.number50,.number100{
   width: 51px;
   border: none;
@@ -51,13 +51,54 @@
 .number25:focus,.number50:focus,.number100:focus{
     background-color:#00BFFF;
 }
-.bottomProjects {
+
+
+.bottomRightButton{
   display: flex;
-  flex-wrap: wrap;
-  border: 1px solid red;
-  height: 100%;
+ flex-direction: row;
+ justify-content: flex-end;
+/* background-color: lightskyblue; */
+margin:40px 8px 0 0;
 }
 
-.introPic {
-  height: 200px;
+.bottomRightButton>button{
+  width: 170px;
+  font-size: 14px;
+  color: white;
+  padding: 5px;
+  background-color: #E2AC30;
+  font-family: 'Open Sans', sans-serif;
+  border-style: none;
+  border-radius: 6px;
+  font-weight: 700;
+  position: absolute;
+ cursor: pointer;
+
 }
+
+
+.introLink{
+  color: #767676;
+  text-decoration: none;
+  font-weight: 700;
+  
+  }
+  .projectImage{
+      width:330px;
+        height:220px;
+        margin-top: 30px;
+      }
+      
+      .eachProject >p{
+      text-align: center;
+      
+      }
+      .bottomProjects {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        /* border: 1px solid red; */
+        height: 100%;
+        /* display: none; */
+        
+      }
