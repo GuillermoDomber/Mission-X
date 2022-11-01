@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 
 import styles from "./DummyNavBar.module.css"
 export default function DummyNavBar(props) {
+
+  
   return (
 
     <div className="dummyNavBar">

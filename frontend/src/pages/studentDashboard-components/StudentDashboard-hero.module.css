@@ -8,6 +8,7 @@
 
 .studentDashboard_hero_displayArea{
     background-color: #FFFFFF80 ;
+    /* background-color: #6b6a7280 ; */
     height: 90%;
     width: 100%;
     border-radius: 30px;
@@ -36,3 +37,4 @@
 *{
 box-sizing: border-box;
 }
+

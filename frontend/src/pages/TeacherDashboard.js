@@ -10,6 +10,7 @@ import styles from "././studentDashboard-components/StudentDashboard.module.css"
 //COMPONENT-IMPORTS----------------------
 import LearningObjectives from "./studentDashboard-components/StudentDashboard_LearningObjectives";
 import ProgressTracker from "./teacherDashboard-components/TeacherDashboard_ProgressTracker";
+import TeacherDashboardHero from "./teacherDashboard-components/TeacherDashboard-hero";
 
 //IMPORT IMAGES FOR FIRST BUTTON----------------
 import learningObjectives from '../assets/DashboardSidebar/learningObjectives.png'
@@ -52,6 +53,7 @@ function initialButtonToggled(){
 
         <main className={styles.mainHeroSection}>
         <DashboardSidebar displayedHeroContent={displayedHeroContent} setDisplayedHeroContent={setDisplayedHeroContent} />
+        <TeacherDashboardHero displayedHeroContent={displayedHeroContent} />
         </main>
         
         

@@ -32,6 +32,25 @@ code {
 
 }
 
+/* :root{
+  --main-font-color: #fafafa;
+  --headings-font-color: #e8e8e8;
+  --lighter-blue: #444851;
+  --darker-blue: #30343e;
+  --white: #30343e;
+
+} */
+
+/* :root{
+  --main-font-color: #707070;
+  --headings-font-color: #6C6C6C;
+  --lighter-blue: #475962;
+  --darker-blue: #2d3a3e;
+  --white: #2d3a3e;
+
+} */
+
+
 .dummyNavBar{
   background-color: rgb(221, 193, 242);
   display: flex;
@@ -39,4 +58,7 @@ code {
   gap: 20px;
   padding: 10px 0;
 }
+
+
+
 
