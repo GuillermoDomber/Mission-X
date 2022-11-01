@@ -35,7 +35,7 @@ app.use(teacherDashboardRoutes);
 //GUILLERMO
 
 //Imported routes
-const authRouter = require("./Routes/authRoutes");
+const authRouter = require("./routes/authRoutes");
 
 //Using routes
 app.use(authRouter);

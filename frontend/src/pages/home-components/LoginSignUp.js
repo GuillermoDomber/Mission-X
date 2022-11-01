@@ -1,4 +1,5 @@
 import React from "react";
+import './LoginSignUp.css'
 
 import HomeLogin from "./HomeLogin";
 import HomeSignUp from "./HomeSignUp";
@@ -21,19 +22,19 @@ export default function Slider({
       <div className="home-row home-slider-nav">
         <button
           onClick={() => onNavigate("login")}
-          className={`button ${
-            selected === "login" ? "button-active" : ""
-          } button-xl`}
+          className={`loginsignup-button ${
+            selected === "login" ? "loginsignup-button-active" : ""
+          } `}
         >
-          Log In
+          LOG IN
         </button>
         <button
           onClick={() => onNavigate("signup")}
-          className={`button ${
-            selected === "signup" ? "button-active" : ""
-          } button-xl`}
+          className={`loginsignup-button ${
+            selected === "signup" ? "loginsignup-button-active" : ""
+          } `}
         >
-          Sign Up
+          SIGN UP
         </button>
       </div>
       <Form type={type} />

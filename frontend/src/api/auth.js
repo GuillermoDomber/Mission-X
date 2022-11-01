@@ -2,8 +2,7 @@ import axios from "axios";
 import config from "./config";
 
 export const login = ({ type, username, password }) =>
-  axios
-    .post(`${config.baseUrl}/authentication/login`, {
+  axios.post(`${config.baseUrl}/authentication/login`, {
       type,
       username,
       password,

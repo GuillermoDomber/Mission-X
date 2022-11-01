@@ -1,6 +1,6 @@
 const express = require("express");
 const bcrypt = require("bcrypt");
-const { pool } = require("../db/db-config");
+const { pool } = require("../db/dbconfig");
 const router = express.Router();
 
 router.post("/api/authentication/login", (req, res) => {
