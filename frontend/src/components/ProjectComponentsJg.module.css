@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Nunito&family=Open+Sans&display=swap');
+
+.introLink{
+    color: #767676;
+    text-decoration: none;
+    font-weight: 700;
+    
+    }
+    .projectImage{
+        width:330px;
+          height:220px;
+          margin-top: 30px;
+        }
+        
+        .eachProject >p{
+        text-align: center;
+        
+        }
+        .bottomProjects {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          /* border: 1px solid red; */
+          height: 100%;
+          /* display: none; */
+          
+        }

@@ -5,6 +5,7 @@ import NzFlag from "../../assets/libPhoto/NZFlag.jpg";
 import kidImg from "../../assets/libPhoto/RawiriFletcher.png";
 import { Link } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
+
 export default function HeaderJG() {
   const [show, setshow] = useState(false);
 
@@ -37,7 +38,7 @@ export default function HeaderJG() {
     <div>
       <nav className={styles.navBarHeader}>
         <div className={styles.leftNav}>
-          <img src={logo} alt='logo'></img>
+         <Link to={'/'}><img src={logo} alt='logo'></img></Link> 
         </div>
    
         <div className={styles.centerNav}>

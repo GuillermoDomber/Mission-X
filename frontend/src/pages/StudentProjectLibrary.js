@@ -5,6 +5,7 @@ import ProjectTitleJG from './StudentProjectLibrary1/ProjectsTitleJG'
 import styles from './StudentProjectLibrary.module.css'
 import LeftSideStudProjJg from './StudentProjectLibrary1/LeftsideStudProjJg'
 import ProjectsLibraryJG from './StudentProjectLibrary1/ProjectsLibraryJG'
+import Footer from "../components/Footer"
 export default function StudentProjectLibrary() {
   return (
     <div>  
@@ -14,6 +15,7 @@ export default function StudentProjectLibrary() {
       <LeftSideStudProjJg></LeftSideStudProjJg>
       <ProjectsLibraryJG></ProjectsLibraryJG>
     </div>
+    <Footer/>
   </div>
 
   )
