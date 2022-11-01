@@ -10,15 +10,15 @@ app.use(cors());
 app.use(express.json());
 
 
-pool = mysql.createPool({
-    host: process.env.MYSQL_HOST,
-    user: process.env.MYSQL_USER,
-    password: process.env.MYSQL_PASS,
-    database: process.env.MYSQL_DATABASE,
-    waitForConnections: true,
-    connectionLimit: 10,
-    queueLimit: 0,
-  });
+// pool = mysql.createPool({
+//     host: process.env.MYSQL_HOST,
+//     user: process.env.MYSQL_USER,
+//     password: process.env.MYSQL_PASS,
+//     database: process.env.MYSQL_DATABASE,
+//     waitForConnections: true,
+//     connectionLimit: 10,
+//     queueLimit: 0,
+//   });
 
 // ------------------ENDPOINTS/ROUTES--------------------//
 
@@ -42,59 +42,15 @@ app.use(authRouter);
 
 
 //JERVIN
-//student project library
-app.get("/studentprojectlibrary", (req, res) => {
-    console.log("/studentprojlib checkpoint   ! 🙌");
-    pool.query("SELECT project_id,name, project_pic,course,activity_type FROM project;", (err, result) => {
-      if (err) return console.log("something is wrong",err);
-      console.log(result);
-      res.send(result);
-    });
-  });
-  //-----------testing beg-int-adv filter------------
-  //Beginner
-app.get("/studentprojectlibrary1", (req, res) => {
-    console.log("/studentprojlib checkpoint   ! 🙌");
-    pool.query("SELECT project_id,name, project_pic,course,activity_type FROM project WHERE course='Beginner';", (err, result) => {
-      if (err) return console.log("something is wrong",err);
-      console.log(result);
-      res.send(result);
-    });
-  });
-//intermediate
-  app.get("/studentprojectlibrary2", (req, res) => {
-    console.log("/studentprojlib checkpoint   ! 🙌");
-    pool.query("SELECT project_id,name, project_pic,course,activity_type FROM project WHERE course='Intermediate';", (err, result) => {
-      if (err) return console.log("something is wrong",err);
-      console.log(result);
-      res.send(result);
-    });
-  });
-//advanced
-  app.get("/studentprojectlibrary3", (req, res) => {
-    console.log("/studentprojlib checkpoint   ! 🙌");
-    pool.query("SELECT project_id,name, project_pic,course,activity_type FROM project WHERE course='Advanced';", (err, result) => {
-      if (err) return console.log("something is wrong",err);
-      console.log(result);
-      res.send(result);
-    });
-  });
 
-    //-----------^^^testing beg-int-adv filter^^^------------
-  //student profile viewer
+ 
+//Imported routes
+const studentProjectlibRoutes = require("./routes/studentProjectLibRoutes")
+const studentProfileViewerRoutes = require("./routes/StudentProfileViewerRoutes")
+//using routes
 
-  app.get("/studentprofileviewer", (req, res) => {
-    console.log("/studentprofile checkpoint   ! 🙌");
-    pool.query("SELECT *FROM student INNER JOIN teacher using (teacher_id) WHERE student_id=12;", (err, result) => {
-      if (err) return console.log("something is wrong",err);
-      console.log(result);
-      res.send(result);
-    });
-  });
-
-
-
-
+app.use(studentProjectlibRoutes)
+app.use(studentProfileViewerRoutes)
 
 
 
