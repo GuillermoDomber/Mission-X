@@ -4,9 +4,13 @@ require('dotenv').config()
 const cors = require("cors");
 const app = express();
 
+//----------------------MIDDLEWARE----------------//
 app.use(cors());
 app.use(express.json())
+//may need to switch the order of cors and express.json???
 
+// -------------CONNECTING TO DATABASE-------------//
+//I have moved this into ../db/dbconfig.js
 const pool = mysql.createPool({
     host: process.env.MYSQL_HOST,
     user: process.env.MYSQL_USER,
@@ -17,17 +21,24 @@ const pool = mysql.createPool({
     queueLimit:0,
     })
 
+//TESTING CONNECTION TO THE FRONT END
+    app.get("/test", (req, res) => {
+        const date = new Date();
+        console.log(`connected to frontend at ${date}`)
 
-    app.post("/login", (req, res) => {
-        console.log("connected to frontend")
-    });
+  });
+
+// ------------------ENDPOINTS/ROUTES--------------------//
+
 //BONNIE 
 
+//Imported routes
+const studentDashboardRoutes = require("./routes/studentDashboardRoutes");
+const teacherDashboardRoutes = require("./routes/teacherDashboardRoutes");
 
-
-
-
-
+//Using routes
+app.use(studentDashboardRoutes);
+app.use(teacherDashboardRoutes);
 
 
 
@@ -60,8 +71,8 @@ const pool = mysql.createPool({
 
 
 
-
-    const PORT = process.env.PORT;
+//===============PORT CONNECTION================//
+const PORT = process.env.PORT;
 app.listen(PORT, (err) => {
   if (err) {
     console.log(err);

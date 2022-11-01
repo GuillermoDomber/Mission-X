@@ -1,0 +1,35 @@
+.outer_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    /* border: 2px solid red; */
+}
+
+.video{
+    width: 90%;
+    height: 90%;
+}
+
+.circle_nav_button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    scale: .5;
+    cursor: pointer;
+    border: 2px solid red;
+}
+
+.flipped{
+    rotate: 180deg;
+}
+
+.circle{
+    position: absolute;
+}
+
+.arrow{
+    position: absolute;
+}
