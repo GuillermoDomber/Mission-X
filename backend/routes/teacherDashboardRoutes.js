@@ -29,7 +29,7 @@ router.get("/teacherDashboard/progress_tracker", (req, res) => {
 
 
 
-//**********DISPLAY ACTUAL TASKS COMPLETED*************/
+//**********PROGRESS TRACKER- DISPLAY ACTUAL TASKS COMPLETED*************/
 router.get("/teacherDashboard/progress_tracker/completed", (req, res) => {
     console.log("/teacherDashboard/progress_tracker/completed ENDPOINT was hit! 🎯");
    
@@ -40,8 +40,11 @@ router.get("/teacherDashboard/progress_tracker/completed", (req, res) => {
     });
   });
 
-  //**********DISPLAY ACTUAL TASKS COMPLETED V2*************/
-  router.get("/teacherDashboard/student_profiles", (req, res) => {
+  //**********PROGRESS TRACKER- DISPLAY ACTUAL TASKS COMPLETED V2*************/
+  
+
+   //**********STUDENT PROFILES- DISPLAY STUDENT PROFILES*************/
+   router.get("/teacherDashboard/student_profiles", (req, res) => {
     console.log("/teacherDashboard/student_profiles ENDPOINT was hit! 🎯");
    
     pool.query("SELECT student_id, name, profile_pic FROM student;", (err, result) => {
@@ -51,10 +54,17 @@ router.get("/teacherDashboard/progress_tracker/completed", (req, res) => {
     });
   });
 
-   //**********DISPLAY STUDENT PROFILES*************/
 
-
-
+   //**********PROJECT SUBMISSIONS- DISPLAY STUDENT SUBMISSIONS************/
+   router.get("/teacherDashboard/project_submissions", (req, res) => {
+    console.log("/teacherDashboard/project_submissions ENDPOINT was hit! 🎯");
+   
+    pool.query("SELECT student.name, student.profile_pic, student.pronoun, student_projects.date_submitted, student_projects.submission FROM student_projects INNER JOIN student USING (student_id) WHERE student_projects.submission IS NOT NULL ORDER BY student_projects.date_submitted;", (err, result) => {
+      if (err) return console.log(err);
+      console.log(result);
+      res.status(200).send(result);
+    });
+  });
   
 
 

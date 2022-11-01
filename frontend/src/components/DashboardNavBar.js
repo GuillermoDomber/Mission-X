@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import styles from "./DashboardNavBar.module.css";
 
@@ -12,6 +12,8 @@ import NZFlag from './../assets/DashboardNavBar/NZFlag.png'
 
 //COMPONENT BEGINS==============================
 export default function DashboardNavBar() {
+
+  const navigate = useNavigate();
 
   //Mapped Project Tracker Buttons---------------------------
   const[progressTrackerBtn, setProgressTrackerBtn] = useState("4")
@@ -85,12 +87,12 @@ export default function DashboardNavBar() {
     {
         id: "screenshotBtn",
         name: "Screenshot Button",
-        text: "Take Screenshot",
+        text: <div onClick={() => {navigate("/404_page_not_found")}}>Take Screenshot</div>,
       },
       {
         id: "helpBtn",
         name: "Help Button",
-        text: "Ask Teacher for help",
+        text: <div onClick={() => {navigate("/404_page_not_found")}}>Ask Teacher for help</div>,
       },
       {
         id: "projectsBtn",
@@ -103,12 +105,12 @@ export default function DashboardNavBar() {
       {
           id: "screenshotBtn",
           name: "Teacher Screenshot Button",
-          text: "Take Screenshot",
+          text: <div onClick={() => {navigate("/404_page_not_found")}}>Take Screenshot</div>,
         },
         {
           id: "helpBtn",
           name: "Help Centre Button",
-          text: "Help Centre",
+          text: <div onClick={() => {navigate("/404_page_not_found")}}>Help Centre</div>,
         },
         {
           id: "projectsBtn",
