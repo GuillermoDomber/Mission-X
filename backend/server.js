@@ -5,32 +5,35 @@ const cors = require("cors");
 
 const app = express();
 
+//----------------------MIDDLEWARE----------------//
 app.use(cors());
 app.use(express.json());
 
-const authRouter = require("./Routes/authRoutes");
+// ------------------ENDPOINTS/ROUTES--------------------//
 
-app.use(authRouter);
-// app.use(studentsSignupRouter);
-// app.use(teachersLoginRouter);
-// app.use(teachersSignupRouter);
+//BONNIE 
 
-// module.exports.pool = mysql.createPool({
-//   host: process.env.MYSQL_HOST,
-//   user: process.env.MYSQL_USER,
-//   password: process.env.MYSQL_PASS,
-//   database: process.env.MYSQL_DATABASE,
-//   waitForConnections: true,
-//   connectionLimit: 10,
-//   queueLimit: 0,
-// });
+//Imported routes
+const studentDashboardRoutes = require("./routes/studentDashboardRoutes");
+const teacherDashboardRoutes = require("./routes/teacherDashboardRoutes");
 
-//BONNIE
+//Using routes
+app.use(studentDashboardRoutes);
+app.use(teacherDashboardRoutes);
 
 //GUILLERMO
 
+//Imported routes
+const authRouter = require("./Routes/authRoutes");
+
+//Using routes
+app.use(authRouter);
+
+
 //JERVIN
 
+
+//===============PORT CONNECTION================//
 const PORT = process.env.PORT;
 app.listen(PORT, (err) => {
   if (err) {

@@ -1,8 +1,10 @@
 import React from 'react'
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, Navigate } from 'react-router-dom'
 import styles from './DashboardSidebar.module.css';
 import SidebarButton from './DashboardSidebar_Button'
+import { redirect } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 
 //================IMPORTING HERO COMPONENTS==============================
@@ -14,6 +16,8 @@ import MakeProject from '../pages/studentDashboard-components/StudentDashboard_M
 import SubmitProject from '../pages/studentDashboard-components/StudentDashboard_SubmitProject';
 //Teacher----------------------------------------------------------
 import ProgressTracker from '../pages/teacherDashboard-components/TeacherDashboard_ProgressTracker';//////NEED TO CREATE AND IMPORT THE REST OF THESE
+import StudentProfiles from '../pages/teacherDashboard-components/TeacherDashboardStudentProfiles';
+import ProjectSubmissions from '../pages/teacherDashboard-components/TeacherDashboardProjectSubmissions';
 
 
 //===============IMPORTING IMAGES========================================
@@ -58,6 +62,12 @@ import projectLibrarySelected from '../assets/DashboardSidebar/projectLibrarySel
 export default function DashboardSidebar(props) {
   
 
+  // function redirect(){
+  //  return Navigate("/404_page_not_found");
+  // }
+
+  const navigate = useNavigate();
+
   //SIDEBAR COLLAPSING FUNCTIONALITY----------------------------------
   const sidebarCollapsed = localStorage.getItem('sidebar-collapsed');
   const [isExpanded, setIsExpanded] = useState(sidebarCollapsed ? false : true);
@@ -88,6 +98,7 @@ export default function DashboardSidebar(props) {
       img: studentProfiles,
       imgSelected: studentProfilesSelected,
       text: "STUDENT PROFILES",
+      componentToDisplay: <StudentProfiles />
     },
     {
       id: "helpRequestsBtn",
@@ -102,6 +113,7 @@ export default function DashboardSidebar(props) {
       img: projectSubmissions,
       imgSelected: projectSubmissionsSelected,
       text: "PROJECT SUBMISSIONS",
+      componentToDisplay: <ProjectSubmissions />
     },
     {
       id: "projectLibrary",
@@ -186,6 +198,7 @@ if (window.location.pathname === "/StudentDashboard"){
 //do I use the index to add a key???
 const buttons = pageDirectory.map((item, index) => {
   return <SidebarButton
+  key={index}
   id={item.id}
   name={item.name}
   img={item.img}
@@ -214,7 +227,7 @@ const buttons = pageDirectory.map((item, index) => {
 
       <div className={styles.sidebar_settings_icons_container}>
         <div className={styles.sidebar_settings_icons}><img src={profile} /><p>Profile</p></div>
-        <div className={styles.sidebar_settings_icons}><img src={settings} /><p>Settings</p></div>
+        <div className={styles.sidebar_settings_icons} onClick={() => {navigate("/404_page_not_found")}}><img src={settings} /><p>Settings</p></div>
         <Link to="/" className={styles.sidebar_link}><div className={styles.sidebar_settings_icons}><img src={logout} /><p>Log out</p></div></Link>
       </div>
     

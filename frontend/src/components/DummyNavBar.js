@@ -2,7 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import styles from "./DummyNavBar.module.css"
-export default function DummyNavBar() {
+export default function DummyNavBar(props) {
+
+  
   return (
 
     <div className="dummyNavBar">
@@ -16,7 +18,7 @@ export default function DummyNavBar() {
       </Link>
       <Link to="/TeacherDashboard" className="Links">TeacherDashboard</Link>
 
-      <div>DummyNavBar</div>
+      <div><button onClick={props.test}>DummyNavBar</button></div>
     </div>
   );
 }

@@ -1,4 +1,4 @@
-.studedentDashboard_hero_outer_container{
+.studentDashboard_hero_outer_container{
     background-color: var(--lighter-blue);
     width: 100%;
     display: flex;
@@ -9,6 +9,7 @@
 .studentDashboard_hero_displayArea{
     background-color: #FFFFFF80 ;
     /* background-color: #6b6a7280 ; */
+    /* background-color: #2d3a3e; */
     height: 90%;
     width: 100%;
     border-radius: 30px;
