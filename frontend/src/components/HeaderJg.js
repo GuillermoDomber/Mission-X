@@ -1,8 +1,8 @@
 import styles from "./HeaderJg.module.css";
-import logo from "../../assets/libPhoto/logo.png";
-import Mflag from "../../assets/libPhoto/Mflag.jpg";
-import NzFlag from "../../assets/libPhoto/NZFlag.jpg";
-import kidImg from "../../assets/libPhoto/RawiriFletcher.png";
+import logo from "../assets/libPhoto/logo.png";
+import Mflag from "../assets/libPhoto/Mflag.jpg";
+import NzFlag from "../assets/libPhoto/NZFlag.jpg";
+import kidImg from "../assets/libPhoto/RawiriFletcher.png";
 import { Link } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 
