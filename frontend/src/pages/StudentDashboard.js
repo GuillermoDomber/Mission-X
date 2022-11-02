@@ -1,3 +1,4 @@
+//-----------------PACKAGE IMPORTS AND CSS--------------------//
 import React from "react";
 import { useState } from 'react';
 import styles from "././studentDashboard-components/StudentDashboard.module.css";
@@ -22,7 +23,8 @@ import progressTrackerSelected from '../assets/DashboardSidebar/progressTrackerS
 //****************STUDENT DASHBOARD PAGE COMPONENT*******************/
 export default function StudentDashboard() {
  
-  //Setting the initial hero component to render--------
+  //Setting the initial hero component to render and the sidebar button that should be toggled initially--------
+  //props passed into hero, sidebar and sidebar buttons
   const [displayedHeroContent, setDisplayedHeroContent] = useState(initialButtonToggled())
  
 function initialButtonToggled(){
@@ -42,6 +44,7 @@ function initialButtonToggled(){
       img: progressTracker,
       imgSelected: progressTrackerSelected,
       text: "PROGRESS TRACKER",
+      // componentToDisplay: <ProgressTracker />,
     }
   }
 }
