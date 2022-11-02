@@ -18,6 +18,7 @@ export default function HomeLogin({ type }) {
   return (
     <form className="home-column home-flex-center" onSubmit={handleLogin}>
       <input
+        className="input"
         name="username"
         onChange={handleUserInput}
         type="text"
@@ -25,13 +26,16 @@ export default function HomeLogin({ type }) {
         required
       ></input>
       <input
+        className="input"
         name="password"
         onChange={handleUserInput}
         type="password"
         placeholder="Password"
         required
       ></input>
-      <button className="button button-accent" type="submit">Login</button>
+      <button className="button button-accent button-margin" type="submit">
+        Login
+      </button>
     </form>
   );
 }

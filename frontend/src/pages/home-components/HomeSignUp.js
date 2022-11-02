@@ -17,47 +17,44 @@ export default function HomeSignUp({ type }) {
   };
   return (
     <form className="home-column home-flex-center" onSubmit={handleSignUp}>
-      <div>
-        <input
-          name="username"
-          onChange={handleUserInput}
-          type="text"
-          placeholder="User Name"
+      <input
+        className="input"
+        name="username"
+        onChange={handleUserInput}
+        type="text"
+        placeholder="User Name"
+        required
+      ></input>
 
-          required
-        ></input>
-      </div>
-      <div>
-        <input
-          name="email"
-          onChange={handleUserInput}
-          type="email"
-          placeholder="Email Address"
+      <input
+        className="input"
+        name="email"
+        onChange={handleUserInput}
+        type="email"
+        placeholder="Email Address"
+        required
+      ></input>
 
-          required
-        ></input>
-      </div>
-      <div>
-        <input
-          name="password"
-          onChange={handleUserInput}
-          type="password"
-          placeholder="Password"
+      <input
+        className="input"
+        name="password"
+        onChange={handleUserInput}
+        type="password"
+        placeholder="Password"
+        required
+      ></input>
 
-          required
-        ></input>
-      </div>
-      <div>
-        <input
-          name="password"
-          onChange={handleUserInput}
-          type="password"
-          placeholder="Confirm Password"
-
-          required
-        ></input>
-      </div>
-      <button className="button button-accent" type="submit">Sign Up</button>
+      <input
+        className="input"
+        name="password"
+        onChange={handleUserInput}
+        type="password"
+        placeholder="Confirm Password"
+        required
+      ></input>
+      <button className="button button-accent button-margin" type="submit">
+        Sign Up
+      </button>
     </form>
   );
 }

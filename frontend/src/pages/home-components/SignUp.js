@@ -1,7 +1,5 @@
 import classRoom from "../../assets/Home/classroom.png";
 import "./SignUp.css";
-// import HomeModal from "../home-components/HomeModal";
-// import { useState } from "react";
 import SignUpButton from "./SignUpButton";
 
 export default function SignUp({ onSignUp }) {
