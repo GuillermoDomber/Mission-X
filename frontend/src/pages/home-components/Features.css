@@ -4,8 +4,19 @@
 }
 
 .home-feature-big-img {
+  /* display: flex; */
   width: 25%;
   padding: 0 22px 80px 22px;
+}
+.home-feature-row{
+  font-weight: bold;
+  display: flex;
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .home-feature-row {
+    flex-direction: column;
+  }
 }
 
 .home-feature-title {
