@@ -18,9 +18,9 @@ export default function Authenticate({
   return (
     <div className="home-authenticate-user">
       <img src={image} alt="img" />
-      <div className="home-students">{title}</div>
+      <div className="home-modal-title">{title}</div>
 
-      <div className="home-colum home-help">
+      <div className="home-colum ">
         <LoginSignup
           selected={selected}
           type={type}
