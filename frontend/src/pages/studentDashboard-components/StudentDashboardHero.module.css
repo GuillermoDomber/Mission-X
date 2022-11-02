@@ -6,15 +6,13 @@
     background-color: var(--lighter-blue);
 }
 
-.studentDashboard_hero_displayArea{
+.studentDashboard_hero_display_area{
     height: 90%;
     width: 100%;
     margin: 30px;
     border-radius: 30px;
     background-color: #FFFFFF80 ;
     /* background-color: #6b6a7280 ; */
-    /* background-color: #2d3a3e; */
 }
-
 
 

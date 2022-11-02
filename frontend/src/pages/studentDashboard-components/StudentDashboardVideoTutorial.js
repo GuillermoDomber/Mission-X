@@ -1,11 +1,14 @@
+//-----------------PACKAGE IMPORTS AND CSS--------------------//
 import React from 'react'
-import { useEffect } from 'react'
-import { useState } from 'react'
-import styles from './StudentDashboard_VideoTutorial.module.css'
-import axios from 'axios';
+import { useEffect, useState } from 'react'
+import styles from './StudentDashboardVideoTutorial.module.css'
 
+//IMAGE IMPORTS------------------------
 import circleNav from '../../assets/Dashboard/navigateCircle.png'
 import leftIcon from '../../assets/Dashboard/leftIcon.png'
+
+
+
 
 export default function StudentDashboard_VideoTutorial() {
  const [vidToDisplay, setVidToDisplay] = useState();
@@ -16,10 +19,11 @@ export default function StudentDashboard_VideoTutorial() {
     fetch("http://localhost:4000/studentDashboard/video")
     .then((res) =>res.json())
     .then((resultsData) =>{
-      //This method means will need to extract data/video path further down
-      console.log(resultsData);
+      //This method means will need to extract data/video path further down in this components code
+      // console.log(resultsData);
+
       //This method means that data/video path has already been extracted.
-      console.log(resultsData[0].video);
+      // console.log(resultsData[0].video);
       setVidToDisplay(resultsData[0].video)
     });
   }, []);

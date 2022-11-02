@@ -6,12 +6,9 @@ export default function StudentDashboardHero(props) {
     <div className={styles.studentDashboard_hero_outer_container}>
 
         <div className={styles.studentDashboard_hero_displayArea} >
-            {/* <div className={styles.hero_section_title}>
-              <p>This is the hero section</p>
-            </div> */}
-            {props.displayedHeroContent.componentToDisplay}
-
             
+            {/* This is triggered when the sidebar button is clicked and a state is changed in the teacher dashboard component */}
+            {props.displayedHeroContent.componentToDisplay}
 
         </div>
 

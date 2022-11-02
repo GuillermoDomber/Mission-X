@@ -1,6 +1,9 @@
+//-----------------PACKAGE IMPORTS AND CSS--------------------//
 import React from 'react'
 import styles from './404PageNotFound.module.css'
 
+
+//********************COMPONENT BEGINS***********************/
 export default function PageNotFound() {
   return (
     <div className={styles.outer_container}>

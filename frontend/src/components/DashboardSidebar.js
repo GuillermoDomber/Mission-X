@@ -1,21 +1,20 @@
+//-----------------PACKAGE IMPORTS AND CSS--------------------//
 import React from 'react'
 import { useState } from 'react'
-import { Link, Navigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import styles from './DashboardSidebar.module.css';
-import SidebarButton from './DashboardSidebar_Button'
-import { redirect } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+import SidebarButton from './DashboardSidebarButton'
 
 
 //================IMPORTING HERO COMPONENTS==============================
 //Student----------------------------------------------------------
-import LearningObjectives from '../pages/studentDashboard-components/StudentDashboard_LearningObjectives'
-import Instructions from '../pages/studentDashboard-components/StudentDashboard_Instructions';
-import VideoTutorial from '../pages/studentDashboard-components/StudentDashboard_VideoTutorial';
-import MakeProject from '../pages/studentDashboard-components/StudentDashboard_MakeProject';
-import SubmitProject from '../pages/studentDashboard-components/StudentDashboard_SubmitProject';
+import LearningObjectives from '../pages/studentDashboard-components/StudentDashboardLearningObjectives'
+import Instructions from '../pages/studentDashboard-components/StudentDashboardInstructions';
+import VideoTutorial from '../pages/studentDashboard-components/StudentDashboardVideoTutorial';
+import MakeProject from '../pages/studentDashboard-components/StudentDashboardMakeProject';
+import SubmitProject from '../pages/studentDashboard-components/StudentDashboardSubmitProject';
 //Teacher----------------------------------------------------------
-import ProgressTracker from '../pages/teacherDashboard-components/TeacherDashboard_ProgressTracker';//////NEED TO CREATE AND IMPORT THE REST OF THESE
+import ProgressTracker from '../pages/teacherDashboard-components/TeacherDashboardProgressTracker';//////NEED TO CREATE AND IMPORT THE REST OF THESE
 import StudentProfiles from '../pages/teacherDashboard-components/TeacherDashboardStudentProfiles';
 import ProjectSubmissions from '../pages/teacherDashboard-components/TeacherDashboardProjectSubmissions';
 
@@ -27,7 +26,7 @@ import settings from '../assets/DashboardSidebar/settings.png'
 import logout from '../assets/DashboardSidebar/logout.png'
 
 //Student----------------------------------------------------------
-import studentPhoto from '../assets/DashboardSidebar/RawiriFletcher.png'
+import studentPhoto from '../assets/DashboardSidebar/RawiriFletcher.png'//replace this with a database image
 import learningObjectives from '../assets/DashboardSidebar/learningObjectives.png'
 import learningObjectivesSelected from '../assets/DashboardSidebar/learningObjectivesSelected.png'
 import instructions from '../assets/DashboardSidebar/instructions.png'
@@ -58,21 +57,25 @@ import projectLibrarySelected from '../assets/DashboardSidebar/projectLibrarySel
 
 
 
-//******************************SIDEBAR COMPONENT*********************************//
+//******************************SIDEBAR COMPONENT BEGINS *********************************//
 export default function DashboardSidebar(props) {
-  
 
-  // function redirect(){
-  //  return Navigate("/404_page_not_found");
-  // }
-
+  //VARIABLES------------------------------------------------------
+  // Set up for the navigate function used by some buttons
   const navigate = useNavigate();
 
-  //SIDEBAR COLLAPSING FUNCTIONALITY----------------------------------
+//Set up for the sidebar collapsing and expanding states
   const sidebarCollapsed = localStorage.getItem('sidebar-collapsed');
   const [isExpanded, setIsExpanded] = useState(sidebarCollapsed ? false : true);
 
- const handleSidebarToggle = () => {
+//Setting a variable that is equal to the current page route url https://stackoverflow.com/questions/39823681/read-the-current-full-url-with-react
+//This is used to display the correct buttons on the teacher or the student dashboard
+  let pageDirectory = window.location.pathname
+
+
+
+  //SIDEBAR COLLAPSING FUNCTIONALITY----------------------------------
+  const handleSidebarToggle = () => {
     if (isExpanded){
       setIsExpanded(false);
       localStorage.setItem('sidebar-collapsed', true);
@@ -183,9 +186,7 @@ export default function DashboardSidebar(props) {
       },
     ];
 
-//GETTING THE CORRECT SIDEBAR TO DISPLAY ON EACH PAGE----------------------
-//Setting a variable that is equal to the current page route url https://stackoverflow.com/questions/39823681/read-the-current-full-url-with-react
-let pageDirectory = window.location.pathname//this could also be set to empty initially 
+//LOGIC FOR GETTING THE CORRECT SIDEBAR TO DISPLAY ON STUDENT/TEACHER DASHBOARD----------------------
 
 if (window.location.pathname === "/StudentDashboard"){
     pageDirectory= studentArray
@@ -194,8 +195,8 @@ if (window.location.pathname === "/StudentDashboard"){
 }
 
 
-//MAPPING OF THR BUTTONS FROM THE ARRAYS-----------------------------------
-//do I use the index to add a key???
+//MAPPING OF THE SIDEBAR BUTTONS FROM THE STUDENT OR TEACHER ARRAYS-----------------------------------
+//passing in the properties of each button as mapped
 const buttons = pageDirectory.map((item, index) => {
   return <SidebarButton
   key={index}
@@ -205,13 +206,17 @@ const buttons = pageDirectory.map((item, index) => {
   imgSelected={item.imgSelected}
   text={item.text}
   componentToDisplay={item.componentToDisplay}
-  handleButtonToggle={props.handleButtonToggle}//Is this used???
-  whatButtonIsSelected={props.whatButtonIsSelected}//Is this used????
   displayedHeroContent={props.displayedHeroContent}
   setDisplayedHeroContent={props.setDisplayedHeroContent}
-  
+
+  // handleButtonToggle={props.handleButtonToggle}//Is this used???
+  // whatButtonIsSelected={props.whatButtonIsSelected}//Is this used????
   />
 })
+
+
+//***********************************RETURN AREA FOR DASHBOARD SIDEBAR COMPONENT*******************************************************//
+
   return (
     <div className={isExpanded ? styles.sidebar_container : `${styles.sidebar_container} ${styles.collapsed}`}>
       
@@ -226,7 +231,7 @@ const buttons = pageDirectory.map((item, index) => {
       </div>
 
       <div className={styles.sidebar_settings_icons_container}>
-        <div className={styles.sidebar_settings_icons}><img src={profile} /><p>Profile</p></div>
+        <Link to="/StudentProfileViewer" className={styles.sidebar_link}><div className={styles.sidebar_settings_icons}><img src={profile} /><p>Profile</p></div></Link>
         <div className={styles.sidebar_settings_icons} onClick={() => {navigate("/404_page_not_found")}}><img src={settings} /><p>Settings</p></div>
         <Link to="/" className={styles.sidebar_link}><div className={styles.sidebar_settings_icons}><img src={logout} /><p>Log out</p></div></Link>
       </div>
@@ -236,4 +241,3 @@ const buttons = pageDirectory.map((item, index) => {
 }
 
 
- 

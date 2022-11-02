@@ -1,21 +1,27 @@
+//-----------------PACKAGE IMPORTS AND CSS--------------------//
 import React from 'react'
-import styles from './TeacherDashboardStudentProfiles.module.css'
 import { useState, useEffect } from 'react'
+import styles from './TeacherDashboardStudentProfiles.module.css'
+
+
+
 
 export default function TeacherDashboardStudentProfiles() {
+  //Contains the data of all students 
   const [studentProfiles, setStudentProfiles] = useState([])
 
 
-  //---------------------STUDENT PROFILES DATA--------------------//
+  //--------------------FETCHING STUDENT PROFILES DATA--------------------//
   useEffect(() => {
     fetch("http://localhost:4000/teacherDashboard/student_profiles")
     .then((res) =>res.json())
     .then((resultsData) =>{
-      console.log('student profiles', resultsData)
+      // console.log('student profiles', resultsData)
       setStudentProfiles(resultsData)
     });
   }, []);
 
+//--------------------MAPPING OF STUDENT PROFILE DATA ONTO CARDS--------------------//
 const profileCards = studentProfiles.map((student)=>{
     return(
         <div className={styles.card}>
@@ -25,6 +31,9 @@ const profileCards = studentProfiles.map((student)=>{
     )
 })
 
+
+
+//************************************STUDENT PROFILES RETURN AREA BEGINS*******************************************************/
 
   return (
     <div className={styles.outermost_container}>
