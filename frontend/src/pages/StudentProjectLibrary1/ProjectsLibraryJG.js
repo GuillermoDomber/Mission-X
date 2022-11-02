@@ -27,6 +27,7 @@ export default function ProjectsLibraryJG() {
   function handleLocalStorage(e) {
     console.log(e.currentTarget.id)
     localStorage.setItem('project-selected', (e.currentTarget.id-1));
+    localStorage.setItem('project-name', (e.currentTarget.name));
     console.log(`the project selected is ${localStorage.getItem('project-selected')}`)
   } 
 // //-----------testing beg-int-adv filter------------
@@ -115,6 +116,7 @@ const advButton = () => {setShowProjects(showAdv)}
                       src={show.project_pic}
                       alt="project images"
                       id={show.project_id}
+                      name={show.name}
                       onClick={handleLocalStorage}
                     ></img>
                     <p>{show.name}</p>

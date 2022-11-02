@@ -104,7 +104,7 @@
 .card_text{
     font-family: 'Open Sans', sans-serif;
     color: var( --main-font-color);
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 700;
     min-width: 30%;
     margin-right: 5%;
