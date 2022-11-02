@@ -27,7 +27,7 @@ export default function StudentProfileViewer() {
                 <div className={styles.leftRight}>
                   <div className={styles.leftBody}>
                     <img
-                      src={show.profile_pic}
+                      src={show.student_profile_pic}
                       className={styles.kidImg}
                       alt="kid"
                     ></img>
@@ -51,12 +51,12 @@ export default function StudentProfileViewer() {
                         <p className={styles.pTag}>Email Address</p>
                       </div>
                       <div className={styles.rightTitle}>
-                        <p className={styles.pTag}>{show.name}</p>
-                        <p className={styles.pTag}>{show.teacher_id}</p>
+                        <p className={styles.pTag}>{show.student_name}</p>
+                        <p className={styles.pTag}>{show.teacher_name}</p>
                         <p className={styles.pTag}>{show.course}</p>
-                        <p className={styles.pTag}>{show.date_of_birth}</p>
-                        <p className={styles.pTag}>{show.contact_number}</p>
-                        <p className={styles.pTag}>{show.email}</p>
+                        <p className={styles.pTag}>{show.student_date_of_birth}</p>
+                        <p className={styles.pTag}>{show.student_contact_number}</p>
+                        <p className={styles.pTag}>{show.student_email}</p>
                       </div>
                     </div>
                   </div>
