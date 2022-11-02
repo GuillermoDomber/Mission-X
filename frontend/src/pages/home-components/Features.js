@@ -47,7 +47,7 @@ export default function Features() {
           Teaching kids programing and digital skills is MORE than just writing
           code
         </div>
-        <div className="home-row">
+        <div className="home-feature-row">
           <img className="home-feature-big-img" src={groupImg1} alt="img"></img>
           <img className="home-feature-big-img" src={groupImg2} alt="img"></img>
           <img className="home-feature-big-img" src={groupImg3} alt="img"></img>

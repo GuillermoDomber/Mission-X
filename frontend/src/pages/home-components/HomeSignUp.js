@@ -12,48 +12,52 @@ export default function HomeSignUp({ type }) {
 
   const handleSignUp = (e) => {
     e.preventDefault();
-    console.log(signUpUser);
+    // console.log(signUpUser);
     signup({ type, ...signUpUser });
   };
   return (
-    <form onSubmit={handleSignUp}>
+    <form className="home-column home-flex-center" onSubmit={handleSignUp}>
       <div>
-        <label>Your username: </label>
         <input
           name="username"
           onChange={handleUserInput}
           type="text"
+          placeholder="User Name"
+
           required
         ></input>
       </div>
       <div>
-        <label>Your email: </label>
         <input
           name="email"
           onChange={handleUserInput}
           type="email"
+          placeholder="Email Address"
+
           required
         ></input>
       </div>
       <div>
-        <label>Your password: </label>
         <input
           name="password"
           onChange={handleUserInput}
           type="password"
+          placeholder="Password"
+
           required
         ></input>
       </div>
       <div>
-        <label>Confirm your password: </label>
         <input
           name="password"
           onChange={handleUserInput}
           type="password"
+          placeholder="Confirm Password"
+
           required
         ></input>
       </div>
-      <button type="submit">Sign Up</button>
+      <button className="button button-accent" type="submit">Sign Up</button>
     </form>
   );
 }

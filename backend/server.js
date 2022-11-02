@@ -10,6 +10,7 @@ app.use(express.json());
 
 // ------------------ENDPOINTS/ROUTES--------------------//
 
+
 //BONNIE 
 
 //Imported routes
@@ -19,6 +20,7 @@ const teacherDashboardRoutes = require("./routes/teacherDashboardRoutes");
 //Using routes
 app.use(studentDashboardRoutes);
 app.use(teacherDashboardRoutes);
+
 
 //GUILLERMO
 

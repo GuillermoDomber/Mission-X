@@ -4,7 +4,7 @@ const { pool } = require("../db/dbconfig");
 const router = express.Router();
 
 router.post("/api/authentication/login", (req, res) => {
-  console.log("/api/authentication/studentlogin ENDPOINT was hit! 🔓");
+  console.log("/api/authentication/login ENDPOINT was hit! 🔓");
   const { type, username, password } = req.body;
   pool.execute(
     `SELECT name, password FROM missio20_team7.${type} WHERE name = ?;`,
@@ -29,6 +29,8 @@ router.post("/api/authentication/login", (req, res) => {
 });
 
 router.post("/api/authentication/signup", (req, res) => {
+  console.log("/api/authentication/signup ENDPOINT was hit! 🔓");
+
   const { type, username, email, password } = req.body;
   const query = `INSERT INTO missio20_team7.${type} (name, email, password) VALUES (?, ?, ?);`;
   bcrypt.hash(password, 10, function (err, hashedPass) {

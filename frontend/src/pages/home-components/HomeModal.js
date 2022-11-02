@@ -1,11 +1,6 @@
 import React, { useState } from "react";
-// import HomeLogin from "./HomeLogin";
-// import HomeSingUp from "./HomeSignUp";
 import "./HomeModal.css";
-// import students from "../../assets/LoginSignup/students.png";
-// import teachers from "../../assets/LoginSignup/teachers.png";
 import Authenticate from "./Authenticate";
-// import esc from "../../assets/LoginSignup/esc.png";
 
 function HomeModal({ closeModal }) {
   const [selected, setSelected] = useState();

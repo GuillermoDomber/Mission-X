@@ -1,9 +1,9 @@
 .dashboardFooterOuterContainer{
-    height: 6vh;
-    background-color: var(--white);
-    font-family: Nunito, sans-serif;
-    color: #707070;
     display: flex;
     justify-content: center;
     align-items: center;
-}
+    height: 6vh;
+    background-color: var(--white);
+    font-family: Nunito, sans-serif;
+    color: var(--main-font-color); 
+} 
