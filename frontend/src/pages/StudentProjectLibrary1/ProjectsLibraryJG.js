@@ -24,17 +24,22 @@ export default function ProjectsLibraryJG() {
       });
   }, []);
 
+
+
+
   function handleLocalStorage(e) {
     console.log(e.currentTarget.id)
     localStorage.setItem('project-selected', (e.currentTarget.id-1));
     localStorage.setItem('project-name', (e.currentTarget.name));
     console.log(`the project selected is ${localStorage.getItem('project-selected')}`)
   } 
+
 // //-----------testing beg-int-adv filter------------
   const [showBeg,setShowBeg] = useState([])
   const [showInt,setShowInt] = useState([])
   const [showAdv,setShowAdv] = useState([])
   const [showAll,setShowAll] = useState([])
+
 useEffect(function () {
   fetch("http://localhost:4000/studentprojectlibrary1")
     .then((res) => res.json())
@@ -66,9 +71,9 @@ const allButton = () =>{setShowProjects(showAll)}
 const begButton = () =>{setShowProjects(showBeg)}
 const intButton = () => {setShowProjects(showInt)}
 const advButton = () => {setShowProjects(showAdv)}
-
-
-
+const showFour = () => {setShowProjects(showAll.slice(0,4))}
+const showEight = () => {setShowProjects(showAll.slice(0,8))}
+const showEleven = () => {setShowProjects(showAll.slice(0,11))}
 
 // //-----------^^testing beg-int-adv filter^^------------
   return (
@@ -86,9 +91,9 @@ const advButton = () => {setShowProjects(showAdv)}
         </div>
         <div className={styles.rightButton}>
           <span className={styles.show}>SHOW</span>
-          <button className={styles.number25}>5</button>
-          <button className={styles.number50}>10</button>
-          <button className={styles.number100}>15</button>
+          <button onClick={showFour} className={styles.number25}>4</button>
+          <button onClick={showEight} className={styles.number50}>8</button>
+          <button onClick={showEleven} className={styles.number100}>11</button>
         </div>
       </div>
 
