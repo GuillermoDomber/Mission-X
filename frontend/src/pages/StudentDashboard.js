@@ -6,10 +6,10 @@ import styles from "././studentDashboard-components/StudentDashboard.module.css"
 //COMPONENT-IMPORTS----------------------
 import DashboardNavBar from "../components/DashboardNavBar";
 import DashboardSidebar from "../components/DashboardSidebar";
-import StudentDashboardHero from "./studentDashboard-components/StudentDashboard-hero";
+import StudentDashboardHero from "./studentDashboard-components/StudentDashboardHero";
 import DashboardFooter from "../components/DashboardFooter";
-import LearningObjectives from "./studentDashboard-components/StudentDashboard_LearningObjectives";
-import ProgressTracker from "./teacherDashboard-components/TeacherDashboard_ProgressTracker";
+import LearningObjectives from "./studentDashboard-components/StudentDashboardLearningObjectives";
+import ProgressTracker from "./teacherDashboard-components/TeacherDashboardProgressTracker";
 
 //IMPORT IMAGES FOR FIRST BUTTON----------------
 import learningObjectives from '../assets/DashboardSidebar/learningObjectives.png'

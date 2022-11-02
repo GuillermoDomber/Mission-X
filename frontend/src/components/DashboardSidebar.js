@@ -3,19 +3,18 @@ import React from 'react'
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import styles from './DashboardSidebar.module.css';
-import SidebarButton from './DashboardSidebar_Button'
-// import { useNavigate } from "react-router-dom";
+import SidebarButton from './DashboardSidebarButton'
 
 
 //================IMPORTING HERO COMPONENTS==============================
 //Student----------------------------------------------------------
-import LearningObjectives from '../pages/studentDashboard-components/StudentDashboard_LearningObjectives'
-import Instructions from '../pages/studentDashboard-components/StudentDashboard_Instructions';
-import VideoTutorial from '../pages/studentDashboard-components/StudentDashboard_VideoTutorial';
-import MakeProject from '../pages/studentDashboard-components/StudentDashboard_MakeProject';
-import SubmitProject from '../pages/studentDashboard-components/StudentDashboard_SubmitProject';
+import LearningObjectives from '../pages/studentDashboard-components/StudentDashboardLearningObjectives'
+import Instructions from '../pages/studentDashboard-components/StudentDashboardInstructions';
+import VideoTutorial from '../pages/studentDashboard-components/StudentDashboardVideoTutorial';
+import MakeProject from '../pages/studentDashboard-components/StudentDashboardMakeProject';
+import SubmitProject from '../pages/studentDashboard-components/StudentDashboardSubmitProject';
 //Teacher----------------------------------------------------------
-import ProgressTracker from '../pages/teacherDashboard-components/TeacherDashboard_ProgressTracker';//////NEED TO CREATE AND IMPORT THE REST OF THESE
+import ProgressTracker from '../pages/teacherDashboard-components/TeacherDashboardProgressTracker';//////NEED TO CREATE AND IMPORT THE REST OF THESE
 import StudentProfiles from '../pages/teacherDashboard-components/TeacherDashboardStudentProfiles';
 import ProjectSubmissions from '../pages/teacherDashboard-components/TeacherDashboardProjectSubmissions';
 

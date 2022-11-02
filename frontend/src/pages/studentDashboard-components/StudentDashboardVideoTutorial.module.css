@@ -1,25 +1,18 @@
 .outer_container{
-    width: 100%;
-    height: 100%;
     display: flex;
-    justify-content: center;
-    gap: 3%;
-    /* align-items: flex-start; */
-    /* border: 2px solid red; */
-    
-
-
-    /* display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100%; */
+    height: 100%;
+    gap: 5%;
+    /* border: 2px solid red; */
 }
 
-.altered_div{
-    width: 85%;
-    margin-top: 100px;
-     /* border: 2px solid red; */
+.video{
+    width: 80%;
+    max-width: 90%;
+    height: 90%;
+    /* border: 3px solid green; */
 }
 
 .circle_nav_button{
@@ -38,8 +31,10 @@
 
 .circle{
     position: absolute;
+    /* border: 2px solid red; */
 }
 
 .arrow{
     position: absolute;
+    /* border: 2px solid red; */
 }

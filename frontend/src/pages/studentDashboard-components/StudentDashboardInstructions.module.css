@@ -1,16 +1,16 @@
 .outer_container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100%;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 3%;
     /* border: 2px solid red; */
 }
 
-.video{
-    width: 90%;
-    height: 90%;
-    /* border: 3px solid green; */
+.imported_html_div{
+    width: 85%;
+    margin-top: 100px;
+     /* border: 2px solid red; */
 }
 
 .circle_nav_button{
@@ -29,10 +29,8 @@
 
 .circle{
     position: absolute;
-    /* border: 2px solid red; */
 }
 
 .arrow{
     position: absolute;
-    /* border: 2px solid red; */
 }

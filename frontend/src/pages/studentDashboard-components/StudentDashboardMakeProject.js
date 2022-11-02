@@ -1,3 +1,4 @@
+//-----------------PACKAGE IMPORTS AND CSS--------------------//
 import React from 'react'
 
 export default function StudentDashboard_MakeProject() {

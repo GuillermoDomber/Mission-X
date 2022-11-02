@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './TeacherDashboard_ProgressTracker.module.css'
+import styles from './TeacherDashboardProgressTracker.module.css'
 import ExportIcon from '../../assets/TeacherDashboard/Export.png'
 import { useState, useEffect } from 'react'
 

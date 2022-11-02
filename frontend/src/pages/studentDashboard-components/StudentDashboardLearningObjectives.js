@@ -1,42 +1,45 @@
+//-----------------PACKAGE IMPORTS AND CSS--------------------//
 import React from 'react'
 import { useEffect, useState } from 'react'
 import styles from './StudentDashboardLearningObjectives.module.css'
 
+
+//*****************LEARNING OBJECTIVES COMPONENT BEGINS****************************/
 export default function StudentDashboard_LearningObjectives() {
-  const [lOContents, setLOContents] = useState();
-  const [localStorageValue, setLocalStorageValue] = useState([])
+  const [lOContents, setLOContents] = useState(); //state to store the learning objecitves html from the database
+  const [localStorageValue, setLocalStorageValue] = useState([]) //retrieving the project_id from local storage of the project that has been clicked, then the right learning objectives data will display from the database
 
- 
-  useEffect(() => {
-    console.log(localStorage.getItem('project-selected'))
+ //This will save value in local storage of the project_id that was selected.
+ //This is later used on line 33 to set the right Learning Objectives data for that project. 
+  useEffect(() => { 
     setLocalStorageValue(parseInt(localStorage.getItem('project-selected')))
-    // console.log(localStorage)
-
+    // console.log(localStorage.getItem('project-selected'))
   }, []);
 
+//This fetches all of the html data for each project- which one is displayed depends on the localStorageValue state.
+//This could perhaps be changed with a dynamic fetch depending on the project clicked.
   useEffect(() => {
     fetch("http://localhost:4000/studentDashboard/learningObjective")
     .then((res) =>res.json())
     .then((resultsData) =>{
-      //This method means will need to extract data/video path further down
-      
-      console.log(resultsData);
-      console.log(localStorageValue);
+      //Testing logs----------
+      // console.log(resultsData);
+      // console.log(localStorageValue);
       // console.log(resultsData[0].learning_objective);
       // console.log(resultsData[localStorage]);
-      //This method means that data/video path has already been extracted.
-      // setLOContents(resultsData[0].learning_objective)
-      // setLOContents(resultsData[localStorageValue - 1].learning_objective)
+
+
+      //This method means that Learning Objectives HTML data is extracted and placed into the LOContents state
       setLOContents(resultsData[localStorageValue].learning_objective)
     });
   }, [localStorageValue]);
 
 
-  
-
+  //********************RETURN AREA FOR LEARNING OBJECTIVES COMPONENT************************//
   return (
     <div className={styles.outer_container}>
       
+      {/* add dompurify here */}
       <div dangerouslySetInnerHTML={{ __html: lOContents}} ></div>
 
     </div>
@@ -44,7 +47,21 @@ export default function StudentDashboard_LearningObjectives() {
 }
 
 
-//THIS IS WHAT WAS INSERTED INTO THE DATABASE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//THIS IS WHAT WAS INSERTED INTO THE DATABASE - (there may be some changes)
 
 {/* <div>
             <div  style="display: flex; flex-direction: column; justify-content: flex-start; align-items: center">
