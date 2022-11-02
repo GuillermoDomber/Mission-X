@@ -43,7 +43,7 @@ export default function StudentProfileViewer() {
                     <h1 className={styles.studentNameHeader}>{show.name}</h1>
                     <div className={styles.bottomContent}>
                       <div className={styles.leftTitle}>
-                        <p className={styles.pTag}>School</p>
+                        <p className={styles.pTag}>Schools</p>
                         <p className={styles.pTag}>Teacher</p>
                         <p className={styles.pTag}>Course</p>
                         <p className={styles.pTag}>Date of Birth</p>
