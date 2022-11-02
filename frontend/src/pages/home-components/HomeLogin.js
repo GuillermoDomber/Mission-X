@@ -12,26 +12,26 @@ export default function HomeLogin({ type }) {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    console.log(loggedInUser);
+    // console.log(loggedInUser);
     login({ type, ...loggedInUser });
   };
   return (
-    <form onSubmit={handleLogin}>
-      <label>Your username: </label>
+    <form className="home-column home-flex-center" onSubmit={handleLogin}>
       <input
         name="username"
         onChange={handleUserInput}
         type="text"
+        placeholder="User Name"
         required
       ></input>
-      <label>Your password: </label>
       <input
         name="password"
         onChange={handleUserInput}
         type="password"
+        placeholder="Password"
         required
       ></input>
-      <button type="submit">Login</button>
+      <button className="button button-accent" type="submit">Login</button>
     </form>
   );
 }

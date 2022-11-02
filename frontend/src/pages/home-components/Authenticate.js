@@ -1,8 +1,6 @@
 import React from "react";
-// import { useState } from "react";
-// import HomeLogin from "./HomeLogin";
-import LoginSignup from "./LoginSignUp";
 import "./HomeModal.css";
+import LoginSignup from "./LoginSignUp";
 import studentsImg from "../../assets/LoginSignup/students.png";
 import teachersImg from "../../assets/LoginSignup/teachers.png";
 
