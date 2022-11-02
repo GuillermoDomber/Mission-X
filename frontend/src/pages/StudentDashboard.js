@@ -1,3 +1,4 @@
+//-----------------PACKAGE IMPORTS AND CSS--------------------//
 import React from "react";
 import { useState } from 'react';
 import styles from "././studentDashboard-components/StudentDashboard.module.css";
@@ -6,10 +7,10 @@ import styles from "././studentDashboard-components/StudentDashboard.module.css"
 //COMPONENT-IMPORTS----------------------
 import DashboardNavBar from "../components/DashboardNavBar";
 import DashboardSidebar from "../components/DashboardSidebar";
-import StudentDashboardHero from "./studentDashboard-components/StudentDashboard-hero";
+import StudentDashboardHero from "./studentDashboard-components/StudentDashboardHero";
 import DashboardFooter from "../components/DashboardFooter";
-import LearningObjectives from "./studentDashboard-components/StudentDashboard_LearningObjectives";
-import ProgressTracker from "./teacherDashboard-components/TeacherDashboard_ProgressTracker";
+import LearningObjectives from "./studentDashboard-components/StudentDashboardLearningObjectives";
+import ProgressTracker from "./teacherDashboard-components/TeacherDashboardProgressTracker";
 
 //IMPORT IMAGES FOR FIRST BUTTON----------------
 import learningObjectives from '../assets/DashboardSidebar/learningObjectives.png'
@@ -22,7 +23,8 @@ import progressTrackerSelected from '../assets/DashboardSidebar/progressTrackerS
 //****************STUDENT DASHBOARD PAGE COMPONENT*******************/
 export default function StudentDashboard() {
  
-  //Setting the initial hero component to render--------
+  //Setting the initial hero component to render and the sidebar button that should be toggled initially--------
+  //props passed into hero, sidebar and sidebar buttons
   const [displayedHeroContent, setDisplayedHeroContent] = useState(initialButtonToggled())
  
 function initialButtonToggled(){
@@ -42,6 +44,7 @@ function initialButtonToggled(){
       img: progressTracker,
       imgSelected: progressTrackerSelected,
       text: "PROGRESS TRACKER",
+      // componentToDisplay: <ProgressTracker />,
     }
   }
 }

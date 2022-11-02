@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './TeacherDashboard_ProgressTracker.module.css'
+import styles from './TeacherDashboardProgressTracker.module.css'
 import ExportIcon from '../../assets/TeacherDashboard/Export.png'
 import { useState, useEffect } from 'react'
 
@@ -99,11 +99,11 @@ const [whoIsIt, setWhoIsIt]= useState([])
               <p className={styles.small_text}>{student.total_tasks_completed}/15 Projects Completed</p>
             </div>
             
-           {/* {projectsDone.map((pupil, index)=> {
+           {projectsDone.map((pupil, index)=> {
               if (pupil.student_id === 4)
               return console.log(`It's ${pupil.name} `)
               }
-            )}  */}
+            )} 
             
             {/* Maybe add a useEffect in here that will select the specific projects that one student has done.  */}
 

@@ -4,80 +4,70 @@
     align-items: center;
     height: 6vh;
     padding: 0 38px;
-    /* min-height: 62px; */
     background-color: var(--white);
-
+    /* min-height: 62px; */
     /* border: 2px solid red; */
 }
 
-/* ---------------------LOGO-------------------------- */
+/* ---------------------LEVEL UP WORKS LOGO-------------------------- */
 .dashboard_navbar_logo{
     height: 60px;
     padding: 3px 0;
     object-fit: contain;
-
+    margin-right: 50px;
     /* border: 2px solid red; */
 }
 
 /* ---------------------PROGRESS TRACKER-------------------------- */
-.dashboard_progressTracker_container{
-    margin-left: 20px;
-    margin-right: auto;
-    margin-bottom: 2px;
+.dashboard_projectTracker_container{
     display: flex;
     align-items: center;
-    /* height: 40px; */
-    /* align-self: flex-end; */
-    /* align-self: flex-end; */
-
+    margin-right: auto;
+    margin-bottom: 2px;
     /* border: 2px solid red; */
 }
 
-.dashboard_progressTracker_container_hidden{
+/* This is to hide the tracker on the teacher page but maintain the right spacing */
+.dashboard_projectTracker_container_hidden{
     opacity: 0;
 }
-
 
 .tracker_text_container{
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-right: 15px;
-    /* background-color: pink */
+    color: var(--headings-font-color);
     /* border: 2px solid red; */
 }
 
 .tracker_text_title{
+    margin: 0;
+    padding:-10px 0;
     font-family: Nunito, sans-serif;
     font-size: 20px;
     font-weight: 800;
-    color: var(--headings-font-color);
-    margin: 0;
-    padding:-10px 0;
-
     /* border: 2px solid blue; */
 }
 
+/* negative margin to pull text closer due to default padding added to text that can't be removed */
 .tracker_text_sub{
+    margin: -6px 0; 
+    padding: 0;
     font-family: 'Open sans', sans-serif;
-    color: var(--headings-font-color);
     font-size: 11px;
     font-weight: bold;
-    /* display: inline-block; */
-    margin: -6px 0;
-    padding: 0;
     /* border: 2px solid magenta; */
 }
 
 .dot{
     height: 15px;
     width: 15px;
+    margin-right: 8px;
+    border-radius: 50%;
     background-color: var(--white);
     border: 2.5px solid var(--darker-blue);
-    border-radius: 50%;
-    margin-right: 8px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
-
 }
 
 .dotSelected{
@@ -86,13 +76,13 @@
     align-items: center;
     height: 30px;
     width: 30px;
-    border-radius: 50%;
     margin-right:8px;
+    border-radius: 50%;
     background-color: #FDF7C0;
     border: 2.5px solid var(--darker-blue);
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    
     position: relative;
-   
 }
 
 .dot p{
@@ -102,22 +92,12 @@
 .dot_text{
     font-family: Nunito, sans-serif;
     font-weight: 900;
-    /* font-size: 18px ; */
     font-size: 16px ;
     color: var(--headings-font-color);
     text-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    
     position: absolute;
 }
-
-
-
-
-
-/* .dashboard_progressTracker{
-    height: 40px;
-    align-self: flex-end;
-} */
-
 
 /* ---------------------NAV BUTTONS-------------------------- */
 .dashboard_nav_btns_container{
@@ -126,12 +106,13 @@
     align-self: flex-end;
     margin-bottom: 10px;
     gap: 27px;
-    
-
     /* border: 2px solid red; */
 }
 
-.navBarBtns{
+.navbar_btns{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 15px;
     height: 2em;
     width: 14em;
@@ -139,9 +120,7 @@
     background-color: orange;
     color: var(--white);
     border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    
     font-weight: bolder;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3),
     2px 2px 10px rgba(0, 0, 0, 0.1);
@@ -149,11 +128,11 @@
     transition: opacity .5s;
 }
 
-.navBarBtns:hover{
+.navbar_btns:hover{
     opacity: 0.6;
 }
 
-.navBarBtns:active{
+.navbar_btns:active{
     opacity: 1;
 }
 
@@ -165,21 +144,21 @@
     background-color: rgb(13, 140, 238);
 }
 
-.navBar_links{
+.navbar_links{
     text-decoration: none;
     color: var(--white);
 }
 
-
 /* ---------------------FLAGS-------------------------- */
 .dashboard_navbar_flags_container{
     display: flex;
-    gap: 8px;
     align-self: flex-start;
     margin-top: 9px;
     margin-left: 38px;
+    height: 12px;
+    gap: 8px;
 }
 
-.navbar_flags{
+/* .navbar_flags{
     height: 12px;
-}
+} */
