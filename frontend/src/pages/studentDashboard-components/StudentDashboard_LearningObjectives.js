@@ -1,5 +1,6 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
+import styles from './StudentDashboardLearningObjectives.module.css'
 
 export default function StudentDashboard_LearningObjectives() {
   const [lOContents, setLOContents] = useState();
@@ -25,7 +26,8 @@ export default function StudentDashboard_LearningObjectives() {
       // console.log(resultsData[localStorage]);
       //This method means that data/video path has already been extracted.
       // setLOContents(resultsData[0].learning_objective)
-      setLOContents(resultsData[localStorageValue - 1].learning_objective)
+      // setLOContents(resultsData[localStorageValue - 1].learning_objective)
+      setLOContents(resultsData[localStorageValue].learning_objective)
     });
   }, [localStorageValue]);
 
@@ -33,7 +35,7 @@ export default function StudentDashboard_LearningObjectives() {
   
 
   return (
-    <div>
+    <div className={styles.outer_container}>
       
       <div dangerouslySetInnerHTML={{ __html: lOContents}} ></div>
 

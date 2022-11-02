@@ -24,11 +24,11 @@ export default function ProjectsLibraryJG() {
       });
   }, []);
 
-
-
-
- 
-
+  function handleLocalStorage(e) {
+    console.log(e.currentTarget.id)
+    localStorage.setItem('project-selected', (e.currentTarget.id-1));
+    console.log(`the project selected is ${localStorage.getItem('project-selected')}`)
+  } 
 // //-----------testing beg-int-adv filter------------
   const [showBeg,setShowBeg] = useState([])
   const [showInt,setShowInt] = useState([])
@@ -104,16 +104,18 @@ const advButton = () => {setShowProjects(showAdv)}
 
 {showProjects &&
           showProjects.map(function (show) {
-            let linkToIntro = show.project_id === 1 ? "/StudentDashboard" : "";
+  
             if(show.course==="Beginner"){}
             return (
               <div>
-                <Link className={styles.introLink} to={linkToIntro}>
+                <Link className={styles.introLink} to="/StudentDashboard">
                   <div key={show.project_id} className={styles.eachProject}>
                     <img
                       className={styles.projectImage}
                       src={show.project_pic}
                       alt="project images"
+                      id={show.project_id}
+                      onClick={handleLocalStorage}
                     ></img>
                     <p>{show.name}</p>
                     <p>

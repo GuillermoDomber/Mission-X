@@ -10,6 +10,7 @@
 .video{
     width: 90%;
     height: 90%;
+    /* border: 3px solid green; */
 }
 
 .circle_nav_button{
@@ -19,7 +20,7 @@
     position: relative;
     scale: .5;
     cursor: pointer;
-    border: 2px solid red;
+    /* border: 2px solid red; */
 }
 
 .flipped{
@@ -28,8 +29,10 @@
 
 .circle{
     position: absolute;
+    /* border: 2px solid red; */
 }
 
 .arrow{
     position: absolute;
+    /* border: 2px solid red; */
 }

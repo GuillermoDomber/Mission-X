@@ -35,10 +35,17 @@ export default function DashboardNavBar() {
     //How to get the tracker button to access local storage-----------------------
     useEffect(() => {
       console.log(localStorage.getItem('project-selected'))
-      setTrackerBtnLocalStorage(parseInt(localStorage.getItem('project-selected')))
+      setTrackerBtnLocalStorage(parseInt(localStorage.getItem('project-selected'))+ 1)
       console.log(trackerBtnLocalStorage)
 
     }, []);
+
+    useEffect(() => {
+      console.log(trackerBtnLocalStorage)
+
+    }, [trackerBtnLocalStorage]);
+
+
 
     let trackerButtons =  trackerButtonsArrayStudent.map((item, index) => {
       return (
